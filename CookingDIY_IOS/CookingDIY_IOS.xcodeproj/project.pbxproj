@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8468C0E91C98627B00E69648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0E81C98627B00E69648 /* main.m */; };
+		8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EB1C98627B00E69648 /* AppDelegate.m */; };
+		8468C0EF1C98627B00E69648 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EE1C98627B00E69648 /* ViewController.m */; };
+		8468C0F21C98627B00E69648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F01C98627B00E69648 /* Main.storyboard */; };
+		8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F31C98627B00E69648 /* Assets.xcassets */; };
+		8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */; };
+		8468C1021C98627B00E69648 /* CookingDIY_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */; };
+		8468C10D1C98627B00E69648 /* CookingDIY_IOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8468C0FE1C98627B00E69648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8468C0DC1C98627A00E69648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8468C0E31C98627B00E69648;
+			remoteInfo = CookingDIY_IOS;
+		};
+		8468C1091C98627B00E69648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8468C0DC1C98627A00E69648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8468C0E31C98627B00E69648;
+			remoteInfo = CookingDIY_IOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingDIY_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8468C0E81C98627B00E69648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8468C0EA1C98627B00E69648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8468C0EB1C98627B00E69648 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8468C0ED1C98627B00E69648 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8468C0EE1C98627B00E69648 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8468C0F11C98627B00E69648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8468C0F31C98627B00E69648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8468C0F61C98627B00E69648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8468C0F81C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8468C0FD1C98627B00E69648 /* CookingDIY_IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingDIY_IOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingDIY_IOSTests.m; sourceTree = "<group>"; };
+		8468C1031C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingDIY_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingDIY_IOSUITests.m; sourceTree = "<group>"; };
+		8468C10E1C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8468C0E11C98627B00E69648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C0FA1C98627B00E69648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C1051C98627B00E69648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8468C0DB1C98627A00E69648 = {
+			isa = PBXGroup;
+			children = (
+				8468C0E61C98627B00E69648 /* CookingDIY_IOS */,
+				8468C1001C98627B00E69648 /* CookingDIY_IOSTests */,
+				8468C10B1C98627B00E69648 /* CookingDIY_IOSUITests */,
+				8468C0E51C98627B00E69648 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8468C0E51C98627B00E69648 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */,
+				8468C0FD1C98627B00E69648 /* CookingDIY_IOSTests.xctest */,
+				8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8468C0E61C98627B00E69648 /* CookingDIY_IOS */ = {
+			isa = PBXGroup;
+			children = (
+				8468C0EA1C98627B00E69648 /* AppDelegate.h */,
+				8468C0EB1C98627B00E69648 /* AppDelegate.m */,
+				8468C0ED1C98627B00E69648 /* ViewController.h */,
+				8468C0EE1C98627B00E69648 /* ViewController.m */,
+				8468C0F01C98627B00E69648 /* Main.storyboard */,
+				8468C0F31C98627B00E69648 /* Assets.xcassets */,
+				8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */,
+				8468C0F81C98627B00E69648 /* Info.plist */,
+				8468C0E71C98627B00E69648 /* Supporting Files */,
+			);
+			path = CookingDIY_IOS;
+			sourceTree = "<group>";
+		};
+		8468C0E71C98627B00E69648 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8468C0E81C98627B00E69648 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8468C1001C98627B00E69648 /* CookingDIY_IOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */,
+				8468C1031C98627B00E69648 /* Info.plist */,
+			);
+			path = CookingDIY_IOSTests;
+			sourceTree = "<group>";
+		};
+		8468C10B1C98627B00E69648 /* CookingDIY_IOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */,
+				8468C10E1C98627B00E69648 /* Info.plist */,
+			);
+			path = CookingDIY_IOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8468C0E31C98627B00E69648 /* CookingDIY_IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8468C1111C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOS" */;
+			buildPhases = (
+				8468C0E01C98627B00E69648 /* Sources */,
+				8468C0E11C98627B00E69648 /* Frameworks */,
+				8468C0E21C98627B00E69648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookingDIY_IOS;
+			productName = CookingDIY_IOS;
+			productReference = 8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8468C0FC1C98627B00E69648 /* CookingDIY_IOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8468C1141C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSTests" */;
+			buildPhases = (
+				8468C0F91C98627B00E69648 /* Sources */,
+				8468C0FA1C98627B00E69648 /* Frameworks */,
+				8468C0FB1C98627B00E69648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8468C0FF1C98627B00E69648 /* PBXTargetDependency */,
+			);
+			name = CookingDIY_IOSTests;
+			productName = CookingDIY_IOSTests;
+			productReference = 8468C0FD1C98627B00E69648 /* CookingDIY_IOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8468C1071C98627B00E69648 /* CookingDIY_IOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8468C1171C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSUITests" */;
+			buildPhases = (
+				8468C1041C98627B00E69648 /* Sources */,
+				8468C1051C98627B00E69648 /* Frameworks */,
+				8468C1061C98627B00E69648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8468C10A1C98627B00E69648 /* PBXTargetDependency */,
+			);
+			name = CookingDIY_IOSUITests;
+			productName = CookingDIY_IOSUITests;
+			productReference = 8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8468C0DC1C98627A00E69648 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = cxyliuyu;
+				TargetAttributes = {
+					8468C0E31C98627B00E69648 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T2SYFM9REN;
+					};
+					8468C0FC1C98627B00E69648 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T2SYFM9REN;
+						TestTargetID = 8468C0E31C98627B00E69648;
+					};
+					8468C1071C98627B00E69648 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T2SYFM9REN;
+						TestTargetID = 8468C0E31C98627B00E69648;
+					};
+				};
+			};
+			buildConfigurationList = 8468C0DF1C98627A00E69648 /* Build configuration list for PBXProject "CookingDIY_IOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8468C0DB1C98627A00E69648;
+			productRefGroup = 8468C0E51C98627B00E69648 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8468C0E31C98627B00E69648 /* CookingDIY_IOS */,
+				8468C0FC1C98627B00E69648 /* CookingDIY_IOSTests */,
+				8468C1071C98627B00E69648 /* CookingDIY_IOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8468C0E21C98627B00E69648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */,
+				8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */,
+				8468C0F21C98627B00E69648 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C0FB1C98627B00E69648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C1061C98627B00E69648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8468C0E01C98627B00E69648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8468C0EF1C98627B00E69648 /* ViewController.m in Sources */,
+				8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */,
+				8468C0E91C98627B00E69648 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C0F91C98627B00E69648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8468C1021C98627B00E69648 /* CookingDIY_IOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8468C1041C98627B00E69648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8468C10D1C98627B00E69648 /* CookingDIY_IOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8468C0FF1C98627B00E69648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8468C0E31C98627B00E69648 /* CookingDIY_IOS */;
+			targetProxy = 8468C0FE1C98627B00E69648 /* PBXContainerItemProxy */;
+		};
+		8468C10A1C98627B00E69648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8468C0E31C98627B00E69648 /* CookingDIY_IOS */;
+			targetProxy = 8468C1091C98627B00E69648 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8468C0F01C98627B00E69648 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8468C0F11C98627B00E69648 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8468C0F61C98627B00E69648 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8468C10F1C98627B00E69648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8468C1101C98627B00E69648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8468C1121C98627B00E69648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CookingDIY_IOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8468C1131C98627B00E69648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CookingDIY_IOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8468C1151C98627B00E69648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CookingDIY_IOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingDIY_IOS.app/CookingDIY_IOS";
+			};
+			name = Debug;
+		};
+		8468C1161C98627B00E69648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CookingDIY_IOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingDIY_IOS.app/CookingDIY_IOS";
+			};
+			name = Release;
+		};
+		8468C1181C98627B00E69648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CookingDIY_IOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CookingDIY_IOS;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8468C1191C98627B00E69648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CookingDIY_IOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CookingDIY_IOS;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8468C0DF1C98627A00E69648 /* Build configuration list for PBXProject "CookingDIY_IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8468C10F1C98627B00E69648 /* Debug */,
+				8468C1101C98627B00E69648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8468C1111C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8468C1121C98627B00E69648 /* Debug */,
+				8468C1131C98627B00E69648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8468C1141C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8468C1151C98627B00E69648 /* Debug */,
+				8468C1161C98627B00E69648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8468C1171C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8468C1181C98627B00E69648 /* Debug */,
+				8468C1191C98627B00E69648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8468C0DC1C98627A00E69648 /* Project object */;
+}
