@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD1371C9D6CC80012F130 /* HomeViewController.m */; };
+		842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13B1C9D6CFA0012F130 /* MessageViewController.m */; };
+		842BD1401C9D6D2F0012F130 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */; };
+		842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD1431C9D6D520012F130 /* AlarmViewController.m */; };
+		842BD1491C9D7D010012F130 /* tabbar_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1451C9D7D010012F130 /* tabbar_alarm.png */; };
+		842BD14A1C9D7D010012F130 /* tabbar_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1461C9D7D010012F130 /* tabbar_home.png */; };
+		842BD14B1C9D7D010012F130 /* tabbar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1471C9D7D010012F130 /* tabbar_message.png */; };
+		842BD14C1C9D7D010012F130 /* tabbar_personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1481C9D7D010012F130 /* tabbar_personal.png */; };
 		8468C0E91C98627B00E69648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0E81C98627B00E69648 /* main.m */; };
 		8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EB1C98627B00E69648 /* AppDelegate.m */; };
-		8468C0EF1C98627B00E69648 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EE1C98627B00E69648 /* ViewController.m */; };
-		8468C0F21C98627B00E69648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F01C98627B00E69648 /* Main.storyboard */; };
 		8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F31C98627B00E69648 /* Assets.xcassets */; };
 		8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */; };
 		8468C1021C98627B00E69648 /* CookingDIY_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */; };
 		8468C10D1C98627B00E69648 /* CookingDIY_IOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */; };
+		84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */; };
+		84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EFEE971C9BCD2700FF1E79 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842BD1361C9D6CC80012F130 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		842BD1371C9D6CC80012F130 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		842BD13A1C9D6CFA0012F130 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		842BD13B1C9D6CFA0012F130 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		842BD13E1C9D6D2F0012F130 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		842BD1421C9D6D520012F130 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		842BD1431C9D6D520012F130 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		842BD1451C9D7D010012F130 /* tabbar_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_alarm.png; sourceTree = "<group>"; };
+		842BD1461C9D7D010012F130 /* tabbar_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_home.png; sourceTree = "<group>"; };
+		842BD1471C9D7D010012F130 /* tabbar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_message.png; sourceTree = "<group>"; };
+		842BD1481C9D7D010012F130 /* tabbar_personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_personal.png; sourceTree = "<group>"; };
 		8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingDIY_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C0E81C98627B00E69648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C0EA1C98627B00E69648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8468C0EB1C98627B00E69648 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8468C0ED1C98627B00E69648 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8468C0EE1C98627B00E69648 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8468C0F11C98627B00E69648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8468C0F31C98627B00E69648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8468C0F61C98627B00E69648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8468C0F81C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +68,9 @@
 		8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingDIY_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingDIY_IOSUITests.m; sourceTree = "<group>"; };
 		8468C10E1C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofanme.png; sourceTree = "<group>"; };
+		84EFEE961C9BCD2700FF1E79 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		84EFEE971C9BCD2700FF1E79 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842BD1351C9D6C8F0012F130 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				842BD1361C9D6CC80012F130 /* HomeViewController.h */,
+				842BD1371C9D6CC80012F130 /* HomeViewController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		842BD1391C9D6CD60012F130 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				842BD13A1C9D6CFA0012F130 /* MessageViewController.h */,
+				842BD13B1C9D6CFA0012F130 /* MessageViewController.m */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		842BD13D1C9D6D100012F130 /* personal */ = {
+			isa = PBXGroup;
+			children = (
+				842BD13E1C9D6D2F0012F130 /* PersonalViewController.h */,
+				842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */,
+			);
+			name = personal;
+			sourceTree = "<group>";
+		};
+		842BD1411C9D6D3A0012F130 /* alarm */ = {
+			isa = PBXGroup;
+			children = (
+				842BD1421C9D6D520012F130 /* AlarmViewController.h */,
+				842BD1431C9D6D520012F130 /* AlarmViewController.m */,
+			);
+			name = alarm;
+			sourceTree = "<group>";
+		};
 		8468C0DB1C98627A00E69648 = {
 			isa = PBXGroup;
 			children = (
@@ -101,15 +157,19 @@
 		8468C0E61C98627B00E69648 /* CookingDIY_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				842BD1411C9D6D3A0012F130 /* alarm */,
+				842BD13D1C9D6D100012F130 /* personal */,
+				842BD1391C9D6CD60012F130 /* message */,
+				842BD1351C9D6C8F0012F130 /* home */,
+				84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */,
 				8468C0EA1C98627B00E69648 /* AppDelegate.h */,
 				8468C0EB1C98627B00E69648 /* AppDelegate.m */,
-				8468C0ED1C98627B00E69648 /* ViewController.h */,
-				8468C0EE1C98627B00E69648 /* ViewController.m */,
-				8468C0F01C98627B00E69648 /* Main.storyboard */,
 				8468C0F31C98627B00E69648 /* Assets.xcassets */,
 				8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */,
 				8468C0F81C98627B00E69648 /* Info.plist */,
 				8468C0E71C98627B00E69648 /* Supporting Files */,
+				84EFEE961C9BCD2700FF1E79 /* RootViewController.h */,
+				84EFEE971C9BCD2700FF1E79 /* RootViewController.m */,
 			);
 			path = CookingDIY_IOS;
 			sourceTree = "<group>";
@@ -117,6 +177,7 @@
 		8468C0E71C98627B00E69648 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84C69CDE1C9D05D00058EC1E /* images */,
 				8468C0E81C98627B00E69648 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +199,17 @@
 				8468C10E1C98627B00E69648 /* Info.plist */,
 			);
 			path = CookingDIY_IOSUITests;
+			sourceTree = "<group>";
+		};
+		84C69CDE1C9D05D00058EC1E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				842BD1451C9D7D010012F130 /* tabbar_alarm.png */,
+				842BD1461C9D7D010012F130 /* tabbar_home.png */,
+				842BD1471C9D7D010012F130 /* tabbar_message.png */,
+				842BD1481C9D7D010012F130 /* tabbar_personal.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */,
+				842BD14A1C9D7D010012F130 /* tabbar_home.png in Resources */,
+				842BD14C1C9D7D010012F130 /* tabbar_personal.png in Resources */,
+				84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */,
+				842BD14B1C9D7D010012F130 /* tabbar_message.png in Resources */,
 				8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */,
-				8468C0F21C98627B00E69648 /* Main.storyboard in Resources */,
+				842BD1491C9D7D010012F130 /* tabbar_alarm.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8468C0EF1C98627B00E69648 /* ViewController.m in Sources */,
+				842BD1401C9D6D2F0012F130 /* PersonalViewController.m in Sources */,
 				8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */,
+				842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */,
 				8468C0E91C98627B00E69648 /* main.m in Sources */,
+				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
+				84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */,
+				842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +391,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8468C0F01C98627B00E69648 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8468C0F11C98627B00E69648 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,8 +486,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CookingDIY_IOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,8 +499,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CookingDIY_IOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cxyliuyu.CookingDIY-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,6 +575,7 @@
 				8468C1131C98627B00E69648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8468C1141C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +584,7 @@
 				8468C1161C98627B00E69648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8468C1171C98627B00E69648 /* Build configuration list for PBXNativeTarget "CookingDIY_IOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +593,7 @@
 				8468C1191C98627B00E69648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

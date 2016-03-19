@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "HomeViewController.h"
+#import "MessageViewController.h"
+#import "AlarmViewController.h"
+#import "PersonalViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,39 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    RootViewController * rootVC = [[RootViewController alloc]init];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    self.window.backgroundColor =[UIColor whiteColor];
+    //标签栏控制器
+    UITabBarController *tab =  [[UITabBarController alloc] init];
+    //创建基本视图
+    HomeViewController * home = [[HomeViewController alloc]init];
+    MessageViewController * message = [[MessageViewController alloc]init];
+    AlarmViewController * alarm = [[AlarmViewController alloc]init];
+    PersonalViewController  * personal = [[PersonalViewController alloc]init];
+    
+    //创建导航视图
+    UINavigationController * homeNAV = [[UINavigationController alloc]initWithRootViewController:home];
+    homeNAV.tabBarItem.title = @"首页";
+    homeNAV.tabBarItem.image = [UIImage imageNamed:@"tabbar_home.png"];
+    UINavigationController * alarmNAV = [[UINavigationController alloc]initWithRootViewController:message];
+    alarmNAV.tabBarItem.title = @"计时";
+    alarmNAV.tabBarItem.image = [UIImage imageNamed:@"tabbar_alarm.png"];
+    UINavigationController * messageNAV = [[UINavigationController alloc]initWithRootViewController:alarm];
+    messageNAV.tabBarItem.title = @"消息";
+    messageNAV.tabBarItem.image = [UIImage imageNamed:@"tabbar_message.png"];
+    UINavigationController * personalNAV = [[UINavigationController alloc]initWithRootViewController:personal];
+    personalNAV.tabBarItem.title = @"个人";
+    personalNAV.tabBarItem.image = [UIImage imageNamed:@"tabbar_personal.png"];
+    
+    tab.viewControllers = [[NSArray alloc]initWithObjects:homeNAV,alarmNAV,messageNAV,personalNAV, nil];
+    
+    //设置标签栏视图为根视图
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
