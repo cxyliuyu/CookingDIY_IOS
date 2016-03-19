@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     super.view.backgroundColor = [UIColor yellowColor];
+    NSLog(@"打印东西");
 }
 
 - (void)didReceiveMemoryWarning {
