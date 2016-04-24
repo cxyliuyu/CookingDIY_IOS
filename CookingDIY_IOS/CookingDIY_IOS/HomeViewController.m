@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    super.view.backgroundColor = [UIColor redColor];
+//    super.view.backgroundColor = [UIColor redColor];
+    if (self) {
+        self.navigationItem.title = @"首页";
+    }
 }
 
 - (void)didReceiveMemoryWarning {

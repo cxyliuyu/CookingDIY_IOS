@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     super.view.backgroundColor = [UIColor yellowColor];
+    if (self) {
+        self.navigationItem.title = @"计时";
+    }
 }
 
 - (void)didReceiveMemoryWarning {

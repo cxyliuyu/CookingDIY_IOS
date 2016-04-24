@@ -1,26 +1,28 @@
 //
-//  MessageViewController.m
-//  CookingDIY_IOS
+//  RootViewController.m
+//  UITest
 //
-//  Created by admin on 16/3/19.
+//  Created by admin on 16/4/13.
 //  Copyright © 2016年 cxyliuyu. All rights reserved.
 //
 
-#import "MessageViewController.h"
+#import "RootViewController.h"
 
-@interface MessageViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation MessageViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    super.view.backgroundColor = [UIColor blueColor];
-    if (self) {
-        self.navigationItem.title = @"消息";
-    }
+    UIView * v = [[UIView alloc]initWithFrame:CGRectMake(20, 20, 300, 500)];
+    UIView * vv = [[UIView alloc]initWithFrame:CGRectMake(20, 20, 150, 400)];
+    [vv setBackgroundColor:[UIColor redColor]];
+    [v setBackgroundColor:[UIColor blueColor]];
+    [v addSubview:vv];
+    [self.view addSubview:v];
 }
 
 - (void)didReceiveMemoryWarning {

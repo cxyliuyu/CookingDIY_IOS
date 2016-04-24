@@ -11,17 +11,28 @@
 		842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13B1C9D6CFA0012F130 /* MessageViewController.m */; };
 		842BD1401C9D6D2F0012F130 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */; };
 		842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD1431C9D6D520012F130 /* AlarmViewController.m */; };
-		842BD1491C9D7D010012F130 /* tabbar_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1451C9D7D010012F130 /* tabbar_alarm.png */; };
-		842BD14A1C9D7D010012F130 /* tabbar_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1461C9D7D010012F130 /* tabbar_home.png */; };
-		842BD14B1C9D7D010012F130 /* tabbar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1471C9D7D010012F130 /* tabbar_message.png */; };
-		842BD14C1C9D7D010012F130 /* tabbar_personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BD1481C9D7D010012F130 /* tabbar_personal.png */; };
+		845B00361C9E48FF00D72280 /* tabbar_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00321C9E48FF00D72280 /* tabbar_alarm.png */; };
+		845B00371C9E48FF00D72280 /* tabbar_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00331C9E48FF00D72280 /* tabbar_home.png */; };
+		845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00341C9E48FF00D72280 /* tabbar_message.png */; };
+		845B00391C9E48FF00D72280 /* tabbar_personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00351C9E48FF00D72280 /* tabbar_personal.png */; };
 		8468C0E91C98627B00E69648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0E81C98627B00E69648 /* main.m */; };
 		8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EB1C98627B00E69648 /* AppDelegate.m */; };
 		8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F31C98627B00E69648 /* Assets.xcassets */; };
 		8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */; };
 		8468C1021C98627B00E69648 /* CookingDIY_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */; };
 		8468C10D1C98627B00E69648 /* CookingDIY_IOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */; };
+		848219081CCCDD4F00B14C2A /* carema.png in Resources */ = {isa = PBXBuildFile; fileRef = 848218FE1CCCDD4F00B14C2A /* carema.png */; };
+		848219091CCCDD4F00B14C2A /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 848218FF1CCCDD4F00B14C2A /* food.png */; };
+		8482190A1CCCDD4F00B14C2A /* nav_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219001CCCDD4F00B14C2A /* nav_home.png */; };
+		8482190B1CCCDD4F00B14C2A /* nav_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219011CCCDD4F00B14C2A /* nav_message.png */; };
+		8482190C1CCCDD4F00B14C2A /* nav_personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219021CCCDD4F00B14C2A /* nav_personal.png */; };
+		8482190D1CCCDD4F00B14C2A /* nav_time.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219031CCCDD4F00B14C2A /* nav_time.png */; };
+		8482190E1CCCDD4F00B14C2A /* right_jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219041CCCDD4F00B14C2A /* right_jiantou.png */; };
+		8482190F1CCCDD4F00B14C2A /* shoucang.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219051CCCDD4F00B14C2A /* shoucang.png */; };
+		848219101CCCDD4F00B14C2A /* userdefaultimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219061CCCDD4F00B14C2A /* userdefaultimg.png */; };
+		848219111CCCDD4F00B14C2A /* zuofan.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219071CCCDD4F00B14C2A /* zuofan.png */; };
 		84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */; };
+		84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */; };
 		84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EFEE971C9BCD2700FF1E79 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +62,10 @@
 		842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		842BD1421C9D6D520012F130 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
 		842BD1431C9D6D520012F130 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
-		842BD1451C9D7D010012F130 /* tabbar_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_alarm.png; sourceTree = "<group>"; };
-		842BD1461C9D7D010012F130 /* tabbar_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_home.png; sourceTree = "<group>"; };
-		842BD1471C9D7D010012F130 /* tabbar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_message.png; sourceTree = "<group>"; };
-		842BD1481C9D7D010012F130 /* tabbar_personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_personal.png; sourceTree = "<group>"; };
+		845B00321C9E48FF00D72280 /* tabbar_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_alarm.png; sourceTree = "<group>"; };
+		845B00331C9E48FF00D72280 /* tabbar_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_home.png; sourceTree = "<group>"; };
+		845B00341C9E48FF00D72280 /* tabbar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_message.png; sourceTree = "<group>"; };
+		845B00351C9E48FF00D72280 /* tabbar_personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_personal.png; sourceTree = "<group>"; };
 		8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingDIY_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C0E81C98627B00E69648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C0EA1C98627B00E69648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,7 +79,19 @@
 		8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingDIY_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingDIY_IOSUITests.m; sourceTree = "<group>"; };
 		8468C10E1C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848218FE1CCCDD4F00B14C2A /* carema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carema.png; sourceTree = "<group>"; };
+		848218FF1CCCDD4F00B14C2A /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		848219001CCCDD4F00B14C2A /* nav_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_home.png; sourceTree = "<group>"; };
+		848219011CCCDD4F00B14C2A /* nav_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_message.png; sourceTree = "<group>"; };
+		848219021CCCDD4F00B14C2A /* nav_personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_personal.png; sourceTree = "<group>"; };
+		848219031CCCDD4F00B14C2A /* nav_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_time.png; sourceTree = "<group>"; };
+		848219041CCCDD4F00B14C2A /* right_jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_jiantou.png; sourceTree = "<group>"; };
+		848219051CCCDD4F00B14C2A /* shoucang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoucang.png; sourceTree = "<group>"; };
+		848219061CCCDD4F00B14C2A /* userdefaultimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userdefaultimg.png; sourceTree = "<group>"; };
+		848219071CCCDD4F00B14C2A /* zuofan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofan.png; sourceTree = "<group>"; };
 		84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofanme.png; sourceTree = "<group>"; };
+		84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXLazy.m"; sourceTree = "<group>"; };
+		84EC4C311CCBA9E20079420A /* UIColor+ZXLazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZXLazy.h"; sourceTree = "<group>"; };
 		84EFEE961C9BCD2700FF1E79 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		84EFEE971C9BCD2700FF1E79 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +180,7 @@
 		8468C0E61C98627B00E69648 /* CookingDIY_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				84EC4C2F1CCBA95B0079420A /* Category */,
 				842BD1411C9D6D3A0012F130 /* alarm */,
 				842BD13D1C9D6D100012F130 /* personal */,
 				842BD1391C9D6CD60012F130 /* message */,
@@ -204,12 +228,31 @@
 		84C69CDE1C9D05D00058EC1E /* images */ = {
 			isa = PBXGroup;
 			children = (
-				842BD1451C9D7D010012F130 /* tabbar_alarm.png */,
-				842BD1461C9D7D010012F130 /* tabbar_home.png */,
-				842BD1471C9D7D010012F130 /* tabbar_message.png */,
-				842BD1481C9D7D010012F130 /* tabbar_personal.png */,
+				845B00321C9E48FF00D72280 /* tabbar_alarm.png */,
+				848218FE1CCCDD4F00B14C2A /* carema.png */,
+				848218FF1CCCDD4F00B14C2A /* food.png */,
+				848219001CCCDD4F00B14C2A /* nav_home.png */,
+				848219011CCCDD4F00B14C2A /* nav_message.png */,
+				848219021CCCDD4F00B14C2A /* nav_personal.png */,
+				848219031CCCDD4F00B14C2A /* nav_time.png */,
+				848219041CCCDD4F00B14C2A /* right_jiantou.png */,
+				848219051CCCDD4F00B14C2A /* shoucang.png */,
+				848219061CCCDD4F00B14C2A /* userdefaultimg.png */,
+				848219071CCCDD4F00B14C2A /* zuofan.png */,
+				845B00331C9E48FF00D72280 /* tabbar_home.png */,
+				845B00341C9E48FF00D72280 /* tabbar_message.png */,
+				845B00351C9E48FF00D72280 /* tabbar_personal.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		84EC4C2F1CCBA95B0079420A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */,
+				84EC4C311CCBA9E20079420A /* UIColor+ZXLazy.h */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,12 +362,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */,
-				842BD14A1C9D7D010012F130 /* tabbar_home.png in Resources */,
-				842BD14C1C9D7D010012F130 /* tabbar_personal.png in Resources */,
+				845B00371C9E48FF00D72280 /* tabbar_home.png in Resources */,
+				848219091CCCDD4F00B14C2A /* food.png in Resources */,
+				8482190E1CCCDD4F00B14C2A /* right_jiantou.png in Resources */,
+				8482190C1CCCDD4F00B14C2A /* nav_personal.png in Resources */,
+				8482190D1CCCDD4F00B14C2A /* nav_time.png in Resources */,
+				848219101CCCDD4F00B14C2A /* userdefaultimg.png in Resources */,
+				8482190F1CCCDD4F00B14C2A /* shoucang.png in Resources */,
+				845B00391C9E48FF00D72280 /* tabbar_personal.png in Resources */,
+				848219111CCCDD4F00B14C2A /* zuofan.png in Resources */,
+				8482190A1CCCDD4F00B14C2A /* nav_home.png in Resources */,
 				84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */,
-				842BD14B1C9D7D010012F130 /* tabbar_message.png in Resources */,
+				845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */,
 				8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */,
-				842BD1491C9D7D010012F130 /* tabbar_alarm.png in Resources */,
+				848219081CCCDD4F00B14C2A /* carema.png in Resources */,
+				845B00361C9E48FF00D72280 /* tabbar_alarm.png in Resources */,
+				8482190B1CCCDD4F00B14C2A /* nav_message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +407,7 @@
 				842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */,
 				8468C0E91C98627B00E69648 /* main.m in Sources */,
 				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
+				84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */,
 				84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */,
 				842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */,
 			);
