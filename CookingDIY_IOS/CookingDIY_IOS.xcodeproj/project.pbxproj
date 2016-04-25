@@ -11,6 +11,8 @@
 		842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13B1C9D6CFA0012F130 /* MessageViewController.m */; };
 		842BD1401C9D6D2F0012F130 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */; };
 		842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BD1431C9D6D520012F130 /* AlarmViewController.m */; };
+		845019901CCDB4ED00207795 /* NSUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450198F1CCDB4ED00207795 /* NSUserDefaultsUtil.m */; };
+		845019931CCDE38800207795 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845019921CCDE38800207795 /* LoginViewController.m */; };
 		845B00361C9E48FF00D72280 /* tabbar_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00321C9E48FF00D72280 /* tabbar_alarm.png */; };
 		845B00371C9E48FF00D72280 /* tabbar_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00331C9E48FF00D72280 /* tabbar_home.png */; };
 		845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00341C9E48FF00D72280 /* tabbar_message.png */; };
@@ -62,6 +64,10 @@
 		842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		842BD1421C9D6D520012F130 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
 		842BD1431C9D6D520012F130 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		8450198E1CCDB4ED00207795 /* NSUserDefaultsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsUtil.h; sourceTree = "<group>"; };
+		8450198F1CCDB4ED00207795 /* NSUserDefaultsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsUtil.m; sourceTree = "<group>"; };
+		845019911CCDE38800207795 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		845019921CCDE38800207795 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		845B00321C9E48FF00D72280 /* tabbar_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_alarm.png; sourceTree = "<group>"; };
 		845B00331C9E48FF00D72280 /* tabbar_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_home.png; sourceTree = "<group>"; };
 		845B00341C9E48FF00D72280 /* tabbar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_message.png; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 			children = (
 				842BD13E1C9D6D2F0012F130 /* PersonalViewController.h */,
 				842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */,
+				845019911CCDE38800207795 /* LoginViewController.h */,
+				845019921CCDE38800207795 /* LoginViewController.m */,
 			);
 			name = personal;
 			sourceTree = "<group>";
@@ -155,6 +163,15 @@
 				842BD1431C9D6D520012F130 /* AlarmViewController.m */,
 			);
 			name = alarm;
+			sourceTree = "<group>";
+		};
+		8450198B1CCDB3B400207795 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8450198E1CCDB4ED00207795 /* NSUserDefaultsUtil.h */,
+				8450198F1CCDB4ED00207795 /* NSUserDefaultsUtil.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		8468C0DB1C98627A00E69648 = {
@@ -180,6 +197,7 @@
 		8468C0E61C98627B00E69648 /* CookingDIY_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				8450198B1CCDB3B400207795 /* Utils */,
 				84EC4C2F1CCBA95B0079420A /* Category */,
 				842BD1411C9D6D3A0012F130 /* alarm */,
 				842BD13D1C9D6D100012F130 /* personal */,
@@ -406,10 +424,12 @@
 				8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */,
 				842BD13C1C9D6CFA0012F130 /* MessageViewController.m in Sources */,
 				8468C0E91C98627B00E69648 /* main.m in Sources */,
+				845019931CCDE38800207795 /* LoginViewController.m in Sources */,
 				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
 				84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */,
 				84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */,
 				842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */,
+				845019901CCDB4ED00207795 /* NSUserDefaultsUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
