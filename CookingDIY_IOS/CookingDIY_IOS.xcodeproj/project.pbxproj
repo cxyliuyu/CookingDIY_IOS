@@ -34,6 +34,10 @@
 		848219101CCCDD4F00B14C2A /* userdefaultimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219061CCCDD4F00B14C2A /* userdefaultimg.png */; };
 		848219111CCCDD4F00B14C2A /* zuofan.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219071CCCDD4F00B14C2A /* zuofan.png */; };
 		84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */; };
+		84CC69741CCEFDBE003AF95B /* MD5Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC69731CCEFDBE003AF95B /* MD5Util.m */; };
+		84CC69771CCF06C6003AF95B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC69761CCF06C6003AF95B /* Reachability.m */; };
+		84CC697A1CCF0845003AF95B /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC69791CCF0845003AF95B /* HttpUtil.m */; };
+		84CC697D1CCF1E36003AF95B /* ValueUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC697C1CCF1E36003AF95B /* ValueUtil.m */; };
 		84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */; };
 		84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EFEE971C9BCD2700FF1E79 /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -96,6 +100,14 @@
 		848219061CCCDD4F00B14C2A /* userdefaultimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userdefaultimg.png; sourceTree = "<group>"; };
 		848219071CCCDD4F00B14C2A /* zuofan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofan.png; sourceTree = "<group>"; };
 		84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofanme.png; sourceTree = "<group>"; };
+		84CC69721CCEFDBE003AF95B /* MD5Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Util.h; sourceTree = "<group>"; };
+		84CC69731CCEFDBE003AF95B /* MD5Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Util.m; sourceTree = "<group>"; };
+		84CC69751CCF06C6003AF95B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		84CC69761CCF06C6003AF95B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		84CC69781CCF0845003AF95B /* HttpUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUtil.h; sourceTree = "<group>"; };
+		84CC69791CCF0845003AF95B /* HttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
+		84CC697B1CCF1E36003AF95B /* ValueUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueUtil.h; sourceTree = "<group>"; };
+		84CC697C1CCF1E36003AF95B /* ValueUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueUtil.m; sourceTree = "<group>"; };
 		84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXLazy.m"; sourceTree = "<group>"; };
 		84EC4C311CCBA9E20079420A /* UIColor+ZXLazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZXLazy.h"; sourceTree = "<group>"; };
 		84EFEE961C9BCD2700FF1E79 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -170,6 +182,12 @@
 			children = (
 				8450198E1CCDB4ED00207795 /* NSUserDefaultsUtil.h */,
 				8450198F1CCDB4ED00207795 /* NSUserDefaultsUtil.m */,
+				84CC69721CCEFDBE003AF95B /* MD5Util.h */,
+				84CC69731CCEFDBE003AF95B /* MD5Util.m */,
+				84CC69781CCF0845003AF95B /* HttpUtil.h */,
+				84CC69791CCF0845003AF95B /* HttpUtil.m */,
+				84CC697B1CCF1E36003AF95B /* ValueUtil.h */,
+				84CC697C1CCF1E36003AF95B /* ValueUtil.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -267,6 +285,8 @@
 		84EC4C2F1CCBA95B0079420A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				84CC69751CCF06C6003AF95B /* Reachability.h */,
+				84CC69761CCF06C6003AF95B /* Reachability.m */,
 				84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */,
 				84EC4C311CCBA9E20079420A /* UIColor+ZXLazy.h */,
 			);
@@ -427,9 +447,13 @@
 				845019931CCDE38800207795 /* LoginViewController.m in Sources */,
 				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
 				84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */,
+				84CC697A1CCF0845003AF95B /* HttpUtil.m in Sources */,
 				84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */,
 				842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */,
 				845019901CCDB4ED00207795 /* NSUserDefaultsUtil.m in Sources */,
+				84CC69771CCF06C6003AF95B /* Reachability.m in Sources */,
+				84CC69741CCEFDBE003AF95B /* MD5Util.m in Sources */,
+				84CC697D1CCF1E36003AF95B /* ValueUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
