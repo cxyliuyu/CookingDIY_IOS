@@ -10,9 +10,9 @@
 
 @interface NSUserDefaultsUtil : NSObject
 
-+(void)saveBoolean:(NSString*) key:(Boolean) value;
++(void)saveBoolean:(NSString*) key value:(Boolean) value;
 +(Boolean)getBoolean:(NSString*) key;
-+(void)saveNSString:(NSString*) key:(NSString*) value;
++(void)saveNSString:(NSString*) key value:(NSString*) value;
 +(NSString*)getNSString:(NSString*) key;
 
 @end

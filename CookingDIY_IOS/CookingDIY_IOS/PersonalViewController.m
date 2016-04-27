@@ -31,15 +31,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //super.view.backgroundColor = [UIColor greenColor];
+    NSLog(@"viewDidLoad方法被调用了");
     if (self) {
         self.navigationItem.title = @"个人中心";
     }
 
     //NSLog(@"SCREENWIDTH = %g,SCREENHEIGHT = %g",SCREENWIDTH,SCREENHEIGHT);
     [self initView];
-    [self refreshView];
-
-   
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +59,7 @@
     _userImg.layer.cornerRadius = 35;
     _userImg.layer.borderWidth = 2;
     _userImg.layer.borderColor = [UIColor colorWithHexString:@"#eeeeee"].CGColor;
+    _userImg.layer.masksToBounds = YES;
     [_userImg setImage:[UIImage imageNamed:@"userdefaultimg.png"]];
     
     _userName = [UILabel new];
@@ -146,11 +146,20 @@
     
     //判断用户是否已经登录
     if ([NSUserDefaultsUtil getBoolean:@"ISLOGIN"]) {
-        NSLog(@"用户还未登录");
+        NSLog(@"用户已经登录");
+        _quit.hidden = NO;
+        [_quit addTarget:self action:@selector(quitLogin) forControlEvents:UIControlEventTouchUpInside];
+        _userName.text = [NSUserDefaultsUtil getNSString:@"userTrueName"];
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSUserDefaultsUtil getNSString:@"userImg"]]]];
+        _userImg.image = image;
+        
+        
         
     }else{
         NSLog(@"用户还未登录");
         _quit.hidden = YES;
+        _userName.text = @"请点击登录";
+        [_userImg setImage:[UIImage imageNamed:@"userdefaultimg.png"]];
         [_userBtn addTarget:self action:@selector(toLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     //[NSUserDefaultsUtil getBoolean:@"xu"];
@@ -168,5 +177,14 @@
     [self presentViewController:login animated:YES completion:nil];
     
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    NSLog(@"viewDidAppear方法被调用了");
+    [self refreshView];
+    //NSLog(@"%@",[NSUserDefaultsUtil getNSString:@"userId"]);
+}
+-(void)quitLogin{
+    //退出登录
+    [NSUserDefaultsUtil saveBoolean:@"ISLOGIN" value:NO];
+    [self refreshView];
+}
 @end

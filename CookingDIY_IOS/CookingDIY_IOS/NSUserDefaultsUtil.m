@@ -9,7 +9,7 @@
 #import "NSUserDefaultsUtil.h"
 
 @implementation NSUserDefaultsUtil
-+(void)saveBoolean:(NSString *)key :(Boolean)value{
++(void)saveBoolean:(NSString *)key value:(Boolean)value{
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     [user setBool:value forKey:key];
 }
@@ -22,7 +22,7 @@
         return value;
     }
 }
-+(void)saveNSString:(NSString *)key :(NSString *)value{
++(void)saveNSString:(NSString *)key value:(NSString *)value{
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     [user setObject:value forKey:key];
 }

@@ -11,6 +11,7 @@
 #import "MD5Util.h"
 #import "ValueUtil.h"
 #import "HttpUtil.h"
+#import "NSUserDefaultsUtil.h"
 
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
@@ -131,5 +132,30 @@
 }
 - (void)login_callBack:(id)value{
     NSLog(@"登录成功");
+    NSData *data = (NSData *)value;
+    //NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+    NSString *code = (NSString *)[resultDictionary objectForKey:@"code"];
+    //NSLog(code);
+    if ([code isEqualToString:@"200"]) {
+        //访问成功
+        NSDictionary *userDic = [resultDictionary objectForKey:@"data"];
+        //NSLog(@"%@",userDic);
+        NSString *userId = [userDic objectForKey:@"id"];
+        NSString *userTrueName = [userDic objectForKey:@"truename"];
+        NSString *userImg = [userDic objectForKey:@"userimg"];
+        NSString *userName = [userDic objectForKey:@"username"];
+        
+        //设置已经登录，并且保存用户数据
+        [NSUserDefaultsUtil saveBoolean:@"ISLOGIN" value:YES];
+        [NSUserDefaultsUtil saveNSString:@"userId" value:userId];
+        [NSUserDefaultsUtil saveNSString:@"userTrueName" value:userTrueName];
+        [NSUserDefaultsUtil saveNSString:@"userImg" value:userImg];
+        [NSUserDefaultsUtil saveNSString:@"userName" value:userName];
+        [self toBack];
+    }
+    
+//
 }
 @end
