@@ -11,4 +11,5 @@
 @interface ValueUtil : NSObject
 + (NSString *)getLoginURL;
 + (NSString *)getKey;
++ (NSString *)getFoodsURL;
 @end
