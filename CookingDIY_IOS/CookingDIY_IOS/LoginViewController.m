@@ -68,6 +68,7 @@
     _passwordTF.borderStyle = UITextBorderStyleRoundedRect;
     _passwordTF.layer.cornerRadius = 5;
     _passwordTF.clearsOnBeginEditing = YES;
+    _passwordTF.secureTextEntry = YES;
     [self.view addSubview:_passwordTF];
     
     //绘制登录和注册按钮
