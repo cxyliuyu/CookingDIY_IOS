@@ -34,6 +34,9 @@
 		8482190F1CCCDD4F00B14C2A /* shoucang.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219051CCCDD4F00B14C2A /* shoucang.png */; };
 		848219101CCCDD4F00B14C2A /* userdefaultimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219061CCCDD4F00B14C2A /* userdefaultimg.png */; };
 		848219111CCCDD4F00B14C2A /* zuofan.png in Resources */ = {isa = PBXBuildFile; fileRef = 848219071CCCDD4F00B14C2A /* zuofan.png */; };
+		8482F42D1CEB595700D5CC30 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F42A1CEB595700D5CC30 /* pause.png */; };
+		8482F42E1CEB595700D5CC30 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F42B1CEB595700D5CC30 /* start.png */; };
+		8482F42F1CEB595700D5CC30 /* stop1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F42C1CEB595700D5CC30 /* stop1.png */; };
 		84B4FEC91CDD7A32006D6A15 /* searchimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B4FEC81CDD7A32006D6A15 /* searchimg.png */; };
 		84B4FECD1CDDDFF4006D6A15 /* FoodUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4FECC1CDDDFF4006D6A15 /* FoodUITableViewCell.m */; };
 		84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C69CDC1C9CE6EA0058EC1E /* zuofanme.png */; };
@@ -103,6 +106,9 @@
 		848219051CCCDD4F00B14C2A /* shoucang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoucang.png; sourceTree = "<group>"; };
 		848219061CCCDD4F00B14C2A /* userdefaultimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userdefaultimg.png; sourceTree = "<group>"; };
 		848219071CCCDD4F00B14C2A /* zuofan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuofan.png; sourceTree = "<group>"; };
+		8482F42A1CEB595700D5CC30 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		8482F42B1CEB595700D5CC30 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		8482F42C1CEB595700D5CC30 /* stop1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop1.png; sourceTree = "<group>"; };
 		84B4FEC81CDD7A32006D6A15 /* searchimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchimg.png; sourceTree = "<group>"; };
 		84B4FECB1CDDDFF4006D6A15 /* FoodUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodUITableViewCell.h; sourceTree = "<group>"; };
 		84B4FECC1CDDDFF4006D6A15 /* FoodUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodUITableViewCell.m; sourceTree = "<group>"; };
@@ -281,6 +287,9 @@
 		84C69CDE1C9D05D00058EC1E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8482F42A1CEB595700D5CC30 /* pause.png */,
+				8482F42B1CEB595700D5CC30 /* start.png */,
+				8482F42C1CEB595700D5CC30 /* stop1.png */,
 				84B4FEC81CDD7A32006D6A15 /* searchimg.png */,
 				845B00321C9E48FF00D72280 /* tabbar_alarm.png */,
 				848218FE1CCCDD4F00B14C2A /* carema.png */,
@@ -420,6 +429,7 @@
 			files = (
 				8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */,
 				845B00371C9E48FF00D72280 /* tabbar_home.png in Resources */,
+				8482F42E1CEB595700D5CC30 /* start.png in Resources */,
 				848219091CCCDD4F00B14C2A /* food.png in Resources */,
 				84B4FEC91CDD7A32006D6A15 /* searchimg.png in Resources */,
 				8482190E1CCCDD4F00B14C2A /* right_jiantou.png in Resources */,
@@ -431,7 +441,9 @@
 				848219111CCCDD4F00B14C2A /* zuofan.png in Resources */,
 				8482190A1CCCDD4F00B14C2A /* nav_home.png in Resources */,
 				84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */,
+				8482F42D1CEB595700D5CC30 /* pause.png in Resources */,
 				845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */,
+				8482F42F1CEB595700D5CC30 /* stop1.png in Resources */,
 				8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */,
 				848219081CCCDD4F00B14C2A /* carema.png in Resources */,
 				845B00361C9E48FF00D72280 /* tabbar_alarm.png in Resources */,

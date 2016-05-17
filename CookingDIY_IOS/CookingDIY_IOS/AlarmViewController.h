@@ -16,14 +16,14 @@
 
 @property UIView *choseTimeView;
 @property UILabel *choseTimeLabel;
-@property UISlider *timeSlider;
+@property UISlider *choseTimeSlider;
 
 @property UIView *startView;
 @property UIView *stopView;
 @property UIView *pauseView;
 @property UIButton *startButton;
 @property UIButton *stopButton;
-@property UIButton *pauseButton;
+@property UIImageView *pauseImageView;
 @property UILabel *startLabel;
 @property UILabel *stopLabel;
 @property UILabel *pauseLabel;
