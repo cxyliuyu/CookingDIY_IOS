@@ -18,11 +18,11 @@
 @property UILabel *choseTimeLabel;
 @property UISlider *choseTimeSlider;
 
-@property UIView *startView;
-@property UIView *stopView;
-@property UIView *pauseView;
 @property UIButton *startButton;
 @property UIButton *stopButton;
+@property UIButton *pauseButton;
+@property UIImageView *startImageView;
+@property UIImageView *stopImageView;
 @property UIImageView *pauseImageView;
 @property UILabel *startLabel;
 @property UILabel *stopLabel;

@@ -14,5 +14,6 @@
 +(Boolean)getBoolean:(NSString*) key;
 +(void)saveNSString:(NSString*) key value:(NSString*) value;
 +(NSString*)getNSString:(NSString*) key;
-
++(void)saveInteger:(NSString *)key value:(NSInteger)value;
++(NSInteger)getInteger:(NSString *)key;
 @end

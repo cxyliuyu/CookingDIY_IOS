@@ -31,4 +31,15 @@
     NSString *value = (NSString*)[user objectForKey:key];
     return value;
 }
+
++(void)saveInteger:(NSString *)key value:(NSInteger)value{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setInteger:value forKey:key];
+}
+
++(NSInteger)getInteger:(NSString *)key{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSInteger value = (NSInteger)[user integerForKey:key];
+    return value;
+}
 @end
