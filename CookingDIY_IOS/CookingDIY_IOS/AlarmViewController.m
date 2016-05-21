@@ -112,6 +112,8 @@
             [_pauseButton setUserInteractionEnabled:NO];
             [timer invalidate];
             isStarted = NO;
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"时间到啦" message:@"注意掌握火候哦" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            [alert show];
         }
     }
     
