@@ -12,4 +12,5 @@
 + (NSString *)getLoginURL;
 + (NSString *)getKey;
 + (NSString *)getFoodsURL;
++ (NSString *)getGetFoodByIdURL;
 @end

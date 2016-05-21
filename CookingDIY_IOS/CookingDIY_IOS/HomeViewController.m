@@ -11,6 +11,7 @@
 #import "HttpUtil.h"
 #import "FoodUITableViewCell.h"
 #import "AFNetworking.h"
+#import "UIColor+ZXLazy.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -49,6 +50,7 @@
     [searchButton addSubview:searchImageView];
     foodsTableView =[[UITableView alloc] initWithFrame:CGRectMake(5, 115, SCREENWIDTH-10, SCREENHEIGHT-115-60)
                                                  style:UITableViewStylePlain];
+    foodsTableView.backgroundColor = [UIColor colorWithHexString:@"#EBEBEB"];
     [self.view addSubview:searchButton];
     [self.view addSubview:foodsTableView];
     
@@ -56,10 +58,7 @@
 }
 
 //数据源方法
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //被点击的事件
-    NSLog(@"列表被点击了");
-}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSLog(@"numberOfRowsInSection");
     if (section == 0) {
@@ -74,15 +73,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //显示一行数据
-    FoodUITableViewCell *cell = [[FoodUITableViewCell alloc]initWithStyle:UITableViewStylePlain reuseIdentifier:nil];
+    FoodUITableViewCell *cell = [[FoodUITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     if (0 == indexPath.section) {
         NSInteger row = indexPath.row;
         NSString *foodName = (NSString *)[foodArray[row] objectForKey:@"foodname"];
         NSString *foodImg = (NSString *)[foodArray[row] objectForKey:@"foodimg"];
-        NSString *foodId = (NSString *)[foodArray[row] objectForKey:@"id"];
+        NSString *foodId = (NSString*)[foodArray[row] objectForKey:@"id"];
         NSString *content = (NSString *)[foodArray[row] objectForKey:@"content"];
-        [cell setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content];
-        [self tableView:foodsTableView heightForRowAtIndexPath:indexPath];
+        //NSLog(@"foodId1 = %@",foodId);
+        [cell setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content foodId:[foodId intValue]];
+        [self tableView:tableView heightForRowAtIndexPath:indexPath];
         return cell;
     }
     return nil;
@@ -105,10 +105,7 @@
         // 这里可以获取到目前的数据请求的进度
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
         // 请求成功，解析数据
-        //NSLog(@"%@", responseObject);
-        
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
         
         //NSLog(@"%@", dic);
@@ -117,7 +114,7 @@
         if ([code isEqualToString:@"200"]) {
             foodArray = (NSArray *)[dic objectForKey:@"list"];
             numberOfRowsInFoods =  [foodArray count];
-            NSLog(@"foodsArray count = %ld",numberOfRowsInFoods);
+            //NSLog(@"foodsArray count = %ld",numberOfRowsInFoods);
             foodsTableView.dataSource = self;//设置食物列表的数据源
             foodsTableView.delegate = self;//设置食物列表的代理对象
         }
@@ -134,90 +131,6 @@
 
 
 
-//- (void)getFoodsAction{
-//   
-//    NSMutableDictionary *params = [NSMutableDictionary new];
-//    [params setValue:@"1" forKey:@"pageNum"];
-//    [params setValue:@"15" forKey:@"pageSize"];
-//    if ([HttpUtil NetWorkIsOK]) {
-//        [HttpUtil post:[ValueUtil getFoodsURL] RequestParams:params FinishBlock:^(NSURLResponse *response,NSData *data,NSError *connectionError){
-//            if(data){
-//                [self performSelectorOnMainThread:@selector(getFoodsCallBack:) withObject:data waitUntilDone: YES];
-//            }else{
-//                NSLog(@"无效的数据");
-//            }
-//        }];
-//    }
-//}
 
-//-(void)getFoodsCallBack:(id)value{
-//    //设置UITableView的代理对象
-//    _foodsTable.dataSource = self;
-//    //设置UITableView的数据源
-//    _foodsTable.delegate = self;
-//    NSData *data = (NSData *)value;
-//    NSError *error;
-//    NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
-//    NSString *code = (NSString *)[resultDictionary objectForKey:@"code"];
-//    if ([code isEqualToString:@"200"]) {
-//        //访问成功
-//        NSLog(@"获取菜谱列表成功");
-//        //解析菜谱数据
-//        NSArray *foodArray = (NSArray *)[resultDictionary  objectForKey:@"list"];
-//        _foodArray = foodArray;
-//        _numberOfRowsInFoods = foodArray.count;
-//        
-//
-//        
-//    }
-//}
-
-
-//数据源方法
-#pragma mark - UITableViewDataSource
-
-////1告诉tableview一共多少组
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 1;
-//};
-//
-////2第section组有多少行
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if(0 == section){
-//        //NSLog(@"%d",_numberOfRowsInFoods);
-//        return _numberOfRowsInFoods;
-//    }
-//    return 0;
-//}
-////3告知系统每一行显示什么内容
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"显示每一行的数据");
-//    FoodUITableViewCell *cell = [[FoodUITableViewCell alloc]initWithStyle:UITableViewStylePlain reuseIdentifier:nil];
-//    if (0 == indexPath.section) {
-//        NSInteger row = indexPath.row;
-//        NSString *foodName = (NSString *)[_foodArray[row] objectForKey:@"foodname"];
-//        NSString *foodImg = (NSString *)[_foodArray[row] objectForKey:@"foodimg"];
-//        NSString *foodId = (NSString *)[_foodArray[row] objectForKey:@"id"];
-//        NSString *content = (NSString *)[_foodArray[row] objectForKey:@"content"];
-//        [cell setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content];
-//        [self tableView:_foodsTable heightForRowAtIndexPath:indexPath];
-//    }
-//    return cell;
-//}
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 200;
-//}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

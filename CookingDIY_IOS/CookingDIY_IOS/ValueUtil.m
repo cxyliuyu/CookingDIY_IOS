@@ -12,6 +12,7 @@ static NSString *loginURL = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/
 static NSString *key = @"E5240C4307AA500300BAA94F9E31CEFD";
 //根据page获取菜谱列表接口
 static NSString *foodsURL = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Food/getFoodsByPage";
+static NSString *getFoodByIdURL = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Food/getFoodById";
 
 
 @implementation ValueUtil
@@ -26,5 +27,9 @@ static NSString *foodsURL = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/
 
 + (NSString *)getFoodsURL{
     return foodsURL;
+}
+
++ (NSString *)getGetFoodByIdURL{
+    return getFoodByIdURL;
 }
 @end
