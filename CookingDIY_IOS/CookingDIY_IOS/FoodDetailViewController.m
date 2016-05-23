@@ -12,6 +12,7 @@
 #import "ValueUtil.h"
 #import "FoodUITableViewCell.h"
 #import "FoodListUITableViewCell.h"
+#import "FoodStepUITableViewCell.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen]bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen]bounds].size.height
@@ -106,19 +107,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     //返回节的个数
-    return 2;
+    return 3;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"numberOfRowsInSection");
+    //NSLog(@"numberOfRowsInSection");
     if (section == 0) {
         return 1;
     }
     if (section == 1) {
         return  numberOfFoodList;
     }
-//    if (section == 2) {
-//        return numberOfFoodStep;
-//    }
+    if (section == 2) {
+        return numberOfFoodStep;
+    }
     return 0;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,12 +130,13 @@
     if (indexPath.section == 1) {
         return 30;
     }
-//    if (indexPath.section == 2) {
-//        return 200;
-//    }
+    if (indexPath.section == 2) {
+        return 200;
+    }
     return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
     if (indexPath.section == 0) {
         FoodUITableViewCell *cell1 = [[FoodUITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         NSString *foodName = (NSString *)[foodDic objectForKey:@"foodname"];
@@ -148,7 +150,7 @@
     }
     if (indexPath.section == 1) {
         FoodListUITableViewCell *cell2 = [[FoodListUITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        NSInteger row = indexPath.row;
+        
         NSString *foodListName = [foodListArray[row] objectForKey:@"foodlistname"];
         NSString *foodListCount = [foodListArray[row] objectForKey:@"foodlistcount"];
         [cell2 setFoodlistName:foodListName foodlistcount:foodListCount];
@@ -156,9 +158,15 @@
         cell2.userInteractionEnabled = NO;//设置不能被点击
         return cell2;
     }
-//    if (indexPath.section == 2) {
-//        
-//    }
+    if (indexPath.section == 2) {
+        FoodStepUITableViewCell *cell3 = [[FoodStepUITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        NSString *foodImg = (NSString *)[foodStepsArray[row] objectForKey:@"stepimg"];
+        NSString *foodContent = (NSString *)[foodStepsArray[row] objectForKey:@"steptxt"];
+        //NSLog(@"foodimg = %@",foodImg);
+        [cell3 setFoodImgImageView:foodImg foodContentTextView:foodContent];
+        cell3.userInteractionEnabled = NO;//设置不能被点击
+        return cell3;
+    }
     return nil;
 }
 @end

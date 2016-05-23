@@ -7,13 +7,14 @@
 //
 
 #import "FoodStepUITableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 @interface FoodStepUITableViewCell(){
     UIView *foodStepView;
     UIImageView *foodStepImageView;
-    UITextView *foodStepContentTextView;
+    UILabel *foodStepContentLabel;
 }
 @end
 @implementation FoodStepUITableViewCell
@@ -26,12 +27,17 @@
 }
 -(void)initView{
     foodStepView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREENWIDTH-20, 200)];
-    foodStepImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 0, SCREENWIDTH-20, 150)];
-    foodStepContentTextView = [[UITextView alloc]initWithFrame:CGRectMake(0, 150, SCREENWIDTH-20, 50)];
+    foodStepImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH-20, 150)];
+    foodStepContentLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 150, SCREENWIDTH-20, 50)];
+    [foodStepView addSubview:foodStepImageView];
+    [foodStepView addSubview:foodStepContentLabel];
+    [self.contentView addSubview:foodStepView];
     
 }
 
+
 -(void)setFoodImgImageView:(NSString *)foodImg foodContentTextView:(NSString *)foodContent{
-    
+    [foodStepImageView sd_setImageWithURL:[NSURL URLWithString:foodImg]];
+    foodStepContentLabel.text = foodContent;
 }
 @end
