@@ -12,6 +12,7 @@
 #import "FoodUITableViewCell.h"
 #import "AFNetworking.h"
 #import "UIColor+ZXLazy.h"
+#import "MJRefresh.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -35,6 +36,11 @@
     [self initView];
     numberOfRowsInFoods = 0;
     [self getFoodsAction];
+    foodsTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //Call this Block When enter the refresh status automatically
+        NSLog(@"下拉刷新回掉");
+        [foodsTableView.header endRefreshing];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +74,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    return 230;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

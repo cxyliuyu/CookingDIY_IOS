@@ -8,6 +8,7 @@
 
 #import "FoodStepUITableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "UIColor+ZXLazy.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -20,24 +21,29 @@
 @implementation FoodStepUITableViewCell
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        [self initView];
-    }
     return self;
 }
--(void)initView{
-    foodStepView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREENWIDTH-20, 200)];
+
+
+-(NSInteger)setFoodImgImageView:(NSString *)foodImg foodContentTextView:(NSString *)foodContent{
+    
     foodStepImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH-20, 150)];
-    foodStepContentLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 150, SCREENWIDTH-20, 50)];
+    foodStepView = [UIView new];
+    foodStepContentLabel = [UILabel new];
+    foodStepContentLabel.textColor = [UIColor colorWithHexString:@"#339933"];
+    foodStepContentLabel.lineBreakMode = UILineBreakModeWordWrap;
+    foodStepContentLabel.numberOfLines = 0;
+    [foodStepImageView sd_setImageWithURL:[NSURL URLWithString:foodImg]];
+    foodStepContentLabel.text = foodContent;
+    UIFont *font = [UIFont fontWithName:@"Arial" size:14];
+    foodStepContentLabel.font = font;
+    CGSize size = CGSizeMake(SCREENWIDTH-20, CGFLOAT_MAX);
+    CGSize labelSize = [foodContent sizeWithFont:font constrainedToSize:size lineBreakMode:foodStepContentLabel.lineBreakMode];
+    foodStepContentLabel.frame = CGRectMake(0, 150, labelSize.width, labelSize.height);
+    foodStepView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREENWIDTH-20, 165+labelSize.height)];
     [foodStepView addSubview:foodStepImageView];
     [foodStepView addSubview:foodStepContentLabel];
     [self.contentView addSubview:foodStepView];
-    
-}
-
-
--(void)setFoodImgImageView:(NSString *)foodImg foodContentTextView:(NSString *)foodContent{
-    [foodStepImageView sd_setImageWithURL:[NSURL URLWithString:foodImg]];
-    foodStepContentLabel.text = foodContent;
+    return labelSize.height;
 }
 @end

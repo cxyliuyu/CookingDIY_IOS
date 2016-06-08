@@ -49,6 +49,7 @@
     personalNAV.tabBarItem.title = @"个人";
     personalNAV.tabBarItem.image = [UIImage imageNamed:@"tabbar_personal.png"];
     
+    
     tab.viewControllers = [[NSArray alloc]initWithObjects:homeNAV,alarmNAV,messageNAV,personalNAV, nil];
     tab.tabBar.tintColor = [UIColor colorWithRed:50/255.0 green:205/255.0 blue:50/255.0 alpha:1];
     //设置标签栏视图为根视图

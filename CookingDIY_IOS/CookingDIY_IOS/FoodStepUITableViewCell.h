@@ -12,6 +12,6 @@
 @property (nonatomic,strong) NSString *foodImg;
 @property (nonatomic,strong) NSString *foodContent;
 
--(void)setFoodImgImageView:(NSString *)foodImg foodContentTextView:(NSString *)foodContent;
+-(NSInteger)setFoodImgImageView:(NSString *)foodImg foodContentTextView:(NSString *)foodContent;
 
 @end

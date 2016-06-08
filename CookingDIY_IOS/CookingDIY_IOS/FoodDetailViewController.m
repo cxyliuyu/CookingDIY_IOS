@@ -25,8 +25,11 @@
     NSArray *foodStepsArray;
     NSInteger numberOfFoodList;//材料的种类数
     NSInteger numberOfFoodStep;//做菜步骤数
+    NSInteger foodStepCellHeight;
+    NSInteger foodCellHeight;
 }
 @end
+
 @implementation FoodDetailViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,17 +47,21 @@
 }
 
 - (void)initView{
+    //添加导航栏
     foodDetailNavBar = [UINavigationBar new];
     foodDetailNavBar.frame = CGRectMake(0, 0, SCREENWIDTH, 68);
     foodDetailNavBar.backgroundColor = [UIColor whiteColor];
+    foodStepCellHeight = 0;
+    foodCellHeight = 0 ;
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"菜谱详情"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"<返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
     [navigationItem setLeftBarButtonItem:leftButton];
     [foodDetailNavBar pushNavigationItem:navigationItem animated:NO];
-    [self.view addSubview:foodDetailNavBar];
-    //NSLog(@"foodId3 = %ld",_foodId);
+    
+    //初始化列表视图
     foodDetailTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 70, SCREENHEIGHT, SCREENHEIGHT-70) style:UITableViewStyleGrouped];
     foodDetailTableView.backgroundColor = [UIColor colorWithHexString:@"#EBEBEB"];
+    
     [self.view addSubview:foodDetailNavBar];
     [self.view addSubview:foodDetailTableView];
 }
@@ -64,14 +71,13 @@
 }
 
 - (void)getFoodById{
-    //根据菜谱id获取菜谱详情
+    //根据菜谱id获取菜谱详情，并显示在屏幕上
     NSMutableDictionary *params = [NSMutableDictionary new];
     [params setValue:[[NSString alloc]initWithFormat:@"%ld",_foodId] forKey:@"id"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:[ValueUtil getGetFoodByIdURL] parameters:params constructingBodyWithBlock:^(id _NonnullformData) {
         // 拼接data到请求体，这个block的参数是遵守AFMultipartFormData协议的。
-        
     }  progress:^(NSProgress * _Nonnull uploadProgress) {
         // 这里可以获取到目前的数据请求的进度
         
@@ -79,16 +85,12 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
         //NSLog(@"%@", dic);
         NSString *code = (NSString *)[dic objectForKey:@"code"];
-        
         if ([code isEqualToString:@"200"]) {
             foodDic = (NSDictionary *)[dic objectForKey:@"food"];
             foodListArray = (NSArray *)[dic objectForKey:@"foodlist"];
             foodStepsArray = (NSArray *)[dic objectForKey:@"foodsteps"];
-//           NSLog(@"%@", foodDic);
-//           NSLog(@"%@", foodListArray);
-//           NSLog(@"%@",foodStepsArray);
-            numberOfFoodList = [foodListArray count];
-            numberOfFoodStep = [foodStepsArray count];
+            numberOfFoodList = [foodListArray count];//配料的个数
+            numberOfFoodStep = [foodStepsArray count];//步骤的个数
             foodDetailTableView.dataSource = self;
             foodDetailTableView.delegate = self;
             [foodDetailTableView reloadData];
@@ -125,13 +127,14 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 200;
+        return 180 + foodCellHeight;
     }
     if (indexPath.section == 1) {
         return 30;
     }
     if (indexPath.section == 2) {
-        return 200;
+        //NSLog(@"heightForRowAtIndexPath cellHeight = %ld",cellHeight);
+        return 170 + foodStepCellHeight;
     }
     return 0;
 }
@@ -143,14 +146,13 @@
         NSString *foodImg = (NSString *)[foodDic objectForKey:@"foodimg"];
         NSString *foodId =  (NSString *)[foodDic objectForKey:@"id"];
         NSString *content = (NSString *)[foodDic objectForKey:@"content"];
-        [cell1 setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content foodId:[foodId intValue]];
+        foodCellHeight = [cell1 setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content foodId:[foodId intValue]];
         [self tableView:tableView heightForRowAtIndexPath:indexPath];
         cell1.userInteractionEnabled = NO;//设置不能被点击
         return cell1;
     }
     if (indexPath.section == 1) {
         FoodListUITableViewCell *cell2 = [[FoodListUITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        
         NSString *foodListName = [foodListArray[row] objectForKey:@"foodlistname"];
         NSString *foodListCount = [foodListArray[row] objectForKey:@"foodlistcount"];
         [cell2 setFoodlistName:foodListName foodlistcount:foodListCount];
@@ -163,8 +165,10 @@
         NSString *foodImg = (NSString *)[foodStepsArray[row] objectForKey:@"stepimg"];
         NSString *foodContent = (NSString *)[foodStepsArray[row] objectForKey:@"steptxt"];
         //NSLog(@"foodimg = %@",foodImg);
-        [cell3 setFoodImgImageView:foodImg foodContentTextView:foodContent];
+        foodStepCellHeight = [cell3 setFoodImgImageView:foodImg foodContentTextView:foodContent];
+        //NSLog(@"cellHeight = %ld",cellHeight);
         cell3.userInteractionEnabled = NO;//设置不能被点击
+        [self tableView:tableView heightForRowAtIndexPath:indexPath];
         return cell3;
     }
     return nil;
