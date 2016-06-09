@@ -13,4 +13,7 @@
 + (NSString *)getKey;
 + (NSString *)getFoodsURL;
 + (NSString *)getGetFoodByIdURL;
++ (NSString *)getIsSaved;
++ (NSString *)getAddSave;
++ (NSString *)getDeleteSave;
 @end

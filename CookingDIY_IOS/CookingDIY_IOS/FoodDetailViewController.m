@@ -13,6 +13,9 @@
 #import "FoodUITableViewCell.h"
 #import "FoodListUITableViewCell.h"
 #import "FoodStepUITableViewCell.h"
+#import "NSUserDefaultsUtil.h"
+#import "ValueUtil.h"
+#import "CommentViewController.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen]bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen]bounds].size.height
@@ -27,6 +30,8 @@
     NSInteger numberOfFoodStep;//做菜步骤数
     NSInteger foodStepCellHeight;
     NSInteger foodCellHeight;
+    UIImageView *saveImg;
+    BOOL isSaved;
 }
 @end
 
@@ -35,7 +40,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
-    NSLog(@"显示菜谱详情页面");
     [self initView];
     
     [self getFoodById];
@@ -53,6 +57,7 @@
     foodDetailNavBar.backgroundColor = [UIColor whiteColor];
     foodStepCellHeight = 0;
     foodCellHeight = 0 ;
+    isSaved = NO;
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"菜谱详情"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"<返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
     [navigationItem setLeftBarButtonItem:leftButton];
@@ -173,4 +178,149 @@
     }
     return nil;
 }
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    //定义分组的头
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 30)];
+    //view.backgroundColor = [UIColor redColor];
+    UILabel *label = [UILabel new];
+    label.frame = CGRectMake(10, 0, SCREENWIDTH, 30);
+    label.font = [UIFont fontWithName:@"Helvetica" size:20];
+    label.textColor = [UIColor colorWithHexString:@"#339933"];
+    [view addSubview:label];
+    if (section == 1) {
+        label.text = @"食材清单";
+        return view;
+    }if(section == 2){
+        label.text = @"做法步骤";
+        return view;
+    }
+    return nil;
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section{
+    //设置header的高度
+    if (section == 1) {
+        return 30;
+    }
+    if (section == 2) {
+        return 30;
+    }
+    return 0;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+        UIButton *saveButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, SCREENWIDTH/2-15, 50)];
+        UIButton *commentButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH/2+5, 10, SCREENWIDTH/2-15, 50)];
+        saveButton.backgroundColor = [UIColor whiteColor];
+        commentButton.backgroundColor = [UIColor whiteColor];
+        saveImg = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 40, 40)];
+        UIImageView *commentImg = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 40, 40)];
+        saveImg.image = [UIImage imageNamed:@"shoucang_n"];
+        commentImg.image = [UIImage imageNamed:@"message_n"];
+        UILabel *saveLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, SCREENWIDTH/2-15-60, 40)];
+        saveLabel.text = @"收藏";
+        UILabel *commentLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, SCREENWIDTH/2-15-60, 40)];
+        commentLabel.text = @"评论";
+        [saveButton addSubview:saveLabel];
+        [commentButton addSubview:commentLabel];
+        [saveButton addSubview:saveImg];
+        [commentButton addSubview:commentImg];
+        [view addSubview:saveButton];
+        [view addSubview:commentButton];
+        
+        //初始化收藏按钮
+        NSMutableDictionary *params = [NSMutableDictionary new];
+        [params setValue:[[NSString alloc]initWithFormat:@"%ld",_foodId] forKey:@"foodId"];
+        [params setValue:[NSUserDefaultsUtil getNSString:@"userId"] forKey:@"userId"];
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [manager POST:[ValueUtil getIsSaved]parameters:params constructingBodyWithBlock: ^(id _NonnullformData) {
+            // 拼接data到请求体，这个block的参数是遵守AFMultipartFormData协议的。
+        }  progress:^(NSProgress * _Nonnull uploadProgress) {
+            // 这里可以获取到目前的数据请求的进度
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //NSLog(@"请求数据成功");
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+            NSString *code = (NSString *)[dic objectForKey:@"code"];
+            if ([code isEqualToString:@"200"]) {
+                //已被收藏
+                saveImg.image = [UIImage imageNamed:@"shoucang_y"];
+                isSaved = YES;
+            }else{
+                //未被收藏
+                saveImg.image = [UIImage imageNamed:@"shoucang_n"];
+                isSaved = NO;
+            }
+        }failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            // 请求失败
+            NSLog(@"请求失败");
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"加载菜谱失败" message:@"请检查您的网络" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }];
+    
+        [saveButton addTarget:self action:@selector(saveAction) forControlEvents:UIControlEventTouchUpInside];
+        [commentButton addTarget:self action:@selector(commentAction) forControlEvents:UIControlEventTouchUpInside];
+        return view;
+    }
+    return nil;
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section {
+    //返回footer的高度
+    if (section == 0) {
+        return 70;
+    }
+    return 0;
+}
+
+- (void)saveAction{
+    //收藏被点击事件
+    NSString *URL;
+    if (isSaved == NO) {
+        URL = [ValueUtil getAddSave];
+    }else{
+        URL = [ValueUtil getDeleteSave];
+    }
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setValue:[[NSString alloc]initWithFormat:@"%ld",_foodId] forKey:@"foodId"];
+    [params setValue:[NSUserDefaultsUtil getNSString:@"userId"] forKey:@"userId"];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params constructingBodyWithBlock: ^(id _NonnullformData) {
+        // 拼接data到请求体，这个block的参数是遵守AFMultipartFormData协议的。
+    }  progress:^(NSProgress * _Nonnull uploadProgress) {
+        // 这里可以获取到目前的数据请求的进度
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //NSLog(@"请求数据成功");
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+        NSString *code = (NSString *)[dic objectForKey:@"code"];
+        if ([code isEqualToString:@"200"]) {
+            //已被收藏
+            if (isSaved == NO) {
+                isSaved = YES;
+                saveImg.image = [UIImage imageNamed:@"shoucang_y"];
+            }else{
+                isSaved = NO;
+                saveImg.image = [UIImage imageNamed:@"shoucang_n"];
+            }
+        }else{
+            //未被收藏
+        }
+    }failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 请求失败
+        NSLog(@"请求失败");
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"加载菜谱失败" message:@"请检查您的网络" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+    
+}
+- (void)commentAction{
+    //评论被点击事件,前往评论页面
+    CommentViewController *commentViewController = [[CommentViewController alloc]init];
+    commentViewController.foodId = _foodId;
+    [self presentViewController:commentViewController animated:YES completion:nil];
+   
+}
+
 @end

@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "UIColor+ZXLazy.h"
 #import "MJRefresh.h"
+#import "SearchViewController.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -23,6 +24,7 @@
     UITableView *foodsTableView;
     NSInteger numberOfRowsInFoods;
     NSArray *foodArray;
+    NSInteger cellHeight;
 }
 @end
 
@@ -60,7 +62,15 @@
     [self.view addSubview:searchButton];
     [self.view addSubview:foodsTableView];
     
+    [searchButton addTarget:self action:@selector(toSearch) forControlEvents:UIControlEventTouchUpInside];
+    cellHeight = 0;
     
+}
+
+- (void)toSearch{
+    //前往搜索页面
+    SearchViewController *searchViewController = [[SearchViewController alloc]init];
+    [self presentViewController:searchViewController animated:YES completion:nil];
 }
 
 //数据源方法
@@ -74,7 +84,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 230;
+    return 180+cellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -87,15 +97,13 @@
         NSString *foodId = (NSString*)[foodArray[row] objectForKey:@"id"];
         NSString *content = (NSString *)[foodArray[row] objectForKey:@"content"];
         //NSLog(@"foodId1 = %@",foodId);
-        [cell setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content foodId:[foodId intValue]];
+        cellHeight = [cell setFoodImgImageView:foodImg foodNameLabel:foodName contentLabel:content foodId:[foodId intValue]];
         [self tableView:tableView heightForRowAtIndexPath:indexPath];
         return cell;
     }
     return nil;
 
 }
-
-
 
 -(void) getFoodsAction{
     NSMutableDictionary *params = [NSMutableDictionary new];

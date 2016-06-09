@@ -18,6 +18,11 @@
 		845B00371C9E48FF00D72280 /* tabbar_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00331C9E48FF00D72280 /* tabbar_home.png */; };
 		845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00341C9E48FF00D72280 /* tabbar_message.png */; };
 		845B00391C9E48FF00D72280 /* tabbar_personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B00351C9E48FF00D72280 /* tabbar_personal.png */; };
+		845C3D681D093C3E00F5E183 /* message_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 845C3D651D093C3E00F5E183 /* message_n.png */; };
+		845C3D691D093C3E00F5E183 /* shoucang_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 845C3D661D093C3E00F5E183 /* shoucang_n.png */; };
+		845C3D6A1D093C3E00F5E183 /* shoucang_y.png in Resources */ = {isa = PBXBuildFile; fileRef = 845C3D671D093C3E00F5E183 /* shoucang_y.png */; };
+		845C3D6D1D09673800F5E183 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C3D6C1D09673800F5E183 /* CommentViewController.m */; };
+		845C3D701D09A3D400F5E183 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845C3D6F1D09A3D400F5E183 /* SearchViewController.m */; };
 		8468C0E91C98627B00E69648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0E81C98627B00E69648 /* main.m */; };
 		8468C0EC1C98627B00E69648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0EB1C98627B00E69648 /* AppDelegate.m */; };
 		8468C0F41C98627B00E69648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F31C98627B00E69648 /* Assets.xcassets */; };
@@ -127,6 +132,13 @@
 		845B00331C9E48FF00D72280 /* tabbar_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_home.png; sourceTree = "<group>"; };
 		845B00341C9E48FF00D72280 /* tabbar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_message.png; sourceTree = "<group>"; };
 		845B00351C9E48FF00D72280 /* tabbar_personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_personal.png; sourceTree = "<group>"; };
+		845C3D651D093C3E00F5E183 /* message_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_n.png; sourceTree = "<group>"; };
+		845C3D661D093C3E00F5E183 /* shoucang_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoucang_n.png; sourceTree = "<group>"; };
+		845C3D671D093C3E00F5E183 /* shoucang_y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoucang_y.png; sourceTree = "<group>"; };
+		845C3D6B1D09673800F5E183 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		845C3D6C1D09673800F5E183 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		845C3D6E1D09A3D400F5E183 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		845C3D6F1D09A3D400F5E183 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		8468C0E41C98627B00E69648 /* CookingDIY_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingDIY_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C0E81C98627B00E69648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C0EA1C98627B00E69648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -293,6 +305,8 @@
 				842BD1371C9D6CC80012F130 /* HomeViewController.m */,
 				849C395E1CF001BF00EC8133 /* FoodDetailViewController.h */,
 				849C395F1CF001BF00EC8133 /* FoodDetailViewController.m */,
+				845C3D6E1D09A3D400F5E183 /* SearchViewController.h */,
+				845C3D6F1D09A3D400F5E183 /* SearchViewController.m */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -302,6 +316,8 @@
 			children = (
 				842BD13A1C9D6CFA0012F130 /* MessageViewController.h */,
 				842BD13B1C9D6CFA0012F130 /* MessageViewController.m */,
+				845C3D6B1D09673800F5E183 /* CommentViewController.h */,
+				845C3D6C1D09673800F5E183 /* CommentViewController.m */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -580,6 +596,9 @@
 		84C69CDE1C9D05D00058EC1E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				845C3D651D093C3E00F5E183 /* message_n.png */,
+				845C3D661D093C3E00F5E183 /* shoucang_n.png */,
+				845C3D671D093C3E00F5E183 /* shoucang_y.png */,
 				8482F42A1CEB595700D5CC30 /* pause.png */,
 				8482F42B1CEB595700D5CC30 /* start.png */,
 				8482F42C1CEB595700D5CC30 /* stop1.png */,
@@ -737,6 +756,9 @@
 				848219111CCCDD4F00B14C2A /* zuofan.png in Resources */,
 				8482190A1CCCDD4F00B14C2A /* nav_home.png in Resources */,
 				84C69CDD1C9CE6EA0058EC1E /* zuofanme.png in Resources */,
+				845C3D6A1D093C3E00F5E183 /* shoucang_y.png in Resources */,
+				845C3D691D093C3E00F5E183 /* shoucang_n.png in Resources */,
+				845C3D681D093C3E00F5E183 /* message_n.png in Resources */,
 				8482F42D1CEB595700D5CC30 /* pause.png in Resources */,
 				845B00381C9E48FF00D72280 /* tabbar_message.png in Resources */,
 				8482F42F1CEB595700D5CC30 /* stop1.png in Resources */,
@@ -779,6 +801,7 @@
 				8468C0E91C98627B00E69648 /* main.m in Sources */,
 				8471AE5D1D071C7A0060C923 /* MJRefreshBackNormalFooter.m in Sources */,
 				845019931CCDE38800207795 /* LoginViewController.m in Sources */,
+				845C3D701D09A3D400F5E183 /* SearchViewController.m in Sources */,
 				849C39571CEFF2B000EC8133 /* UIButton+WebCache.m in Sources */,
 				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
 				849C39661CF06F4900EC8133 /* FoodStepUITableViewCell.m in Sources */,
@@ -793,6 +816,7 @@
 				84CC697A1CCF0845003AF95B /* HttpUtil.m in Sources */,
 				848C75DF1CED8EDE00294B46 /* AFSecurityPolicy.m in Sources */,
 				849C394F1CEFF2B000EC8133 /* NSData+ImageContentType.m in Sources */,
+				845C3D6D1D09673800F5E183 /* CommentViewController.m in Sources */,
 				849C39601CF001BF00EC8133 /* FoodDetailViewController.m in Sources */,
 				8471AE631D071C7A0060C923 /* MJRefreshConst.m in Sources */,
 				849C39531CEFF2B000EC8133 /* SDWebImageDownloader.m in Sources */,
