@@ -12,18 +12,22 @@
 #import "ValueUtil.h"
 #import "HttpUtil.h"
 #import "NSUserDefaultsUtil.h"
+#import "RegisterViewController.h"
 
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 
-@interface LoginViewController()
-
+@interface LoginViewController()<UITextFieldDelegate>{
+    UIImageView *appImage ;
+    UIView *formView;
+}
 @property UINavigationBar *loginNavBar;
 @property UIButton *login;
 @property UIButton *toRegister;
 @property UITextField *userNameTF;
 @property UITextField *passwordTF;
+
 
 @end
 
@@ -49,50 +53,64 @@
     
     
     //绘制登陆页面
-    UIImageView *appImage = [[UIImageView alloc]initWithFrame:CGRectMake(SCREENWIDTH/3, 120, SCREENWIDTH/3, SCREENWIDTH/3)];
+    appImage = [[UIImageView alloc]initWithFrame:CGRectMake(SCREENWIDTH/3, 120, SCREENWIDTH/3, SCREENWIDTH/3)];
     appImage.image = [UIImage imageNamed:@"zuofanme.png"];
     [self.view addSubview:appImage];
     
+    formView = [[UIView alloc]initWithFrame:CGRectMake(20, SCREENWIDTH/3 + 140, SCREENWIDTH-40, 200)];
+    [self.view addSubview:formView];
+    
+    
     //绘制输入框
     _userNameTF = [UITextField new];
-    _userNameTF.frame = CGRectMake(20, SCREENWIDTH/3 + 140, SCREENWIDTH - 40, 40);
+    _userNameTF.frame = CGRectMake(0, 0, SCREENWIDTH - 40, 40);
     _userNameTF.placeholder = @"请输入用户名";
     _userNameTF.borderStyle = UITextBorderStyleRoundedRect;
     _userNameTF.layer.cornerRadius = 5;
     _userNameTF.clearsOnBeginEditing = YES;
-    [self.view addSubview:_userNameTF];
+    [formView addSubview:_userNameTF];
 
     _passwordTF = [UITextField new];
-    _passwordTF.frame = CGRectMake(20, SCREENWIDTH/3 + 190, SCREENWIDTH - 40, 40);
+    _passwordTF.frame = CGRectMake(0, 50, SCREENWIDTH - 40, 40);
     _passwordTF.placeholder = @"请输入密码";
     _passwordTF.borderStyle = UITextBorderStyleRoundedRect;
     _passwordTF.layer.cornerRadius = 5;
     _passwordTF.clearsOnBeginEditing = YES;
     _passwordTF.secureTextEntry = YES;
-    [self.view addSubview:_passwordTF];
+    [formView addSubview:_passwordTF];
     
     //绘制登录和注册按钮
     _login = [UIButton new];
-    _login.frame = CGRectMake(20, SCREENWIDTH/3 +250, SCREENWIDTH-40, 40);
+    _login.frame = CGRectMake(0, 110, SCREENWIDTH-40, 40);
     [_login setTitle:@"登录" forState:UIControlStateNormal];
     _login.backgroundColor = [UIColor greenColor];
     _login.layer.cornerRadius = 10;
-    [self.view addSubview:_login];
+    [formView addSubview:_login];
     
     _toRegister = [UIButton new];
-    _toRegister.frame = CGRectMake(20, SCREENWIDTH/3 +300, SCREENWIDTH-40, 40);
+    _toRegister.frame = CGRectMake(0, 160, SCREENWIDTH-40, 40);
     [_toRegister setTitle:@"注册" forState:UIControlStateNormal];
     _toRegister.backgroundColor = [UIColor redColor];
     _toRegister.layer.cornerRadius = 10;
-    [self.view addSubview:_toRegister];
+    [formView addSubview:_toRegister];
     
     [_login addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    [_toRegister addTarget:self action:@selector(toRegister) forControlEvents:UIControlEventTouchUpInside];
+    _userNameTF.delegate = self;
+    _passwordTF.delegate = self;
+    
     
 }
 - (void) toBack{
     //返回的点击事件
     //NSLog(@"返回按钮被点击了");
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void) toRegister{
+    //前往注册页面
+    RegisterViewController *registerViewController = [[RegisterViewController alloc]init];
+    [self presentViewController:registerViewController animated:YES completion:nil];
 }
 
 - (void) loginAction{
@@ -158,5 +176,20 @@
     }
     
 //
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    	appImage.hidden = YES;
+    formView.frame = CGRectMake(20, 90, SCREENWIDTH-40, 200);
+    NSLog(@"开始编辑");
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    NSLog(@"结束编辑");
+    appImage.hidden = NO;
+    formView.frame = CGRectMake(20, SCREENWIDTH/3 + 140, SCREENWIDTH-40, 200);
+    return YES;
 }
 @end

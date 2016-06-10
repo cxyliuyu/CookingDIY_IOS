@@ -29,6 +29,8 @@
 		8468C0F71C98627B00E69648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C0F51C98627B00E69648 /* LaunchScreen.storyboard */; };
 		8468C1021C98627B00E69648 /* CookingDIY_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C1011C98627B00E69648 /* CookingDIY_IOSTests.m */; };
 		8468C10D1C98627B00E69648 /* CookingDIY_IOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */; };
+		846B5C281D0A9905009A880F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B5C271D0A9904009A880F /* RegisterViewController.m */; };
+		846B5C2B1D0AF8A6009A880F /* FoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B5C2A1D0AF8A6009A880F /* FoodListViewController.m */; };
 		8471AE541D071C7A0060C923 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471AE2A1D071C7A0060C923 /* MJRefreshAutoFooter.m */; };
 		8471AE551D071C7A0060C923 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471AE2C1D071C7A0060C923 /* MJRefreshBackFooter.m */; };
 		8471AE561D071C7A0060C923 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471AE2E1D071C7A0060C923 /* MJRefreshComponent.m */; };
@@ -152,6 +154,10 @@
 		8468C1081C98627B00E69648 /* CookingDIY_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingDIY_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C10C1C98627B00E69648 /* CookingDIY_IOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingDIY_IOSUITests.m; sourceTree = "<group>"; };
 		8468C10E1C98627B00E69648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846B5C261D0A9904009A880F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		846B5C271D0A9904009A880F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		846B5C291D0AF8A6009A880F /* FoodListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodListViewController.h; sourceTree = "<group>"; };
+		846B5C2A1D0AF8A6009A880F /* FoodListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodListViewController.m; sourceTree = "<group>"; };
 		8471AE291D071C7A0060C923 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		8471AE2A1D071C7A0060C923 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		8471AE2B1D071C7A0060C923 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -329,6 +335,10 @@
 				842BD13F1C9D6D2F0012F130 /* PersonalViewController.m */,
 				845019911CCDE38800207795 /* LoginViewController.h */,
 				845019921CCDE38800207795 /* LoginViewController.m */,
+				846B5C261D0A9904009A880F /* RegisterViewController.h */,
+				846B5C271D0A9904009A880F /* RegisterViewController.m */,
+				846B5C291D0AF8A6009A880F /* FoodListViewController.h */,
+				846B5C2A1D0AF8A6009A880F /* FoodListViewController.m */,
 			);
 			name = personal;
 			sourceTree = "<group>";
@@ -804,6 +814,7 @@
 				845C3D701D09A3D400F5E183 /* SearchViewController.m in Sources */,
 				849C39571CEFF2B000EC8133 /* UIButton+WebCache.m in Sources */,
 				842BD1441C9D6D520012F130 /* AlarmViewController.m in Sources */,
+				846B5C281D0A9905009A880F /* RegisterViewController.m in Sources */,
 				849C39661CF06F4900EC8133 /* FoodStepUITableViewCell.m in Sources */,
 				849C39591CEFF2B000EC8133 /* UIImage+MultiFormat.m in Sources */,
 				84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */,
@@ -820,6 +831,7 @@
 				849C39601CF001BF00EC8133 /* FoodDetailViewController.m in Sources */,
 				8471AE631D071C7A0060C923 /* MJRefreshConst.m in Sources */,
 				849C39531CEFF2B000EC8133 /* SDWebImageDownloader.m in Sources */,
+				846B5C2B1D0AF8A6009A880F /* FoodListViewController.m in Sources */,
 				84B4FECD1CDDDFF4006D6A15 /* FoodUITableViewCell.m in Sources */,
 				8471AE641D071C7A0060C923 /* UIScrollView+MJExtension.m in Sources */,
 				84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */,

@@ -146,14 +146,15 @@
     
     //判断用户是否已经登录
     if ([NSUserDefaultsUtil getBoolean:@"ISLOGIN"]) {
-        NSLog(@"用户已经登录");
+        //NSLog(@"用户已经登录");
         _quit.hidden = NO;
         [_quit addTarget:self action:@selector(quitLogin) forControlEvents:UIControlEventTouchUpInside];
         _userName.text = [NSUserDefaultsUtil getNSString:@"userTrueName"];
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSUserDefaultsUtil getNSString:@"userImg"]]]];
         _userImg.image = image;
-        
-        
+        _userBtn.userInteractionEnabled = NO;
+        _mysaveBtn.userInteractionEnabled = YES;
+        [_mysaveBtn addTarget:self action:@selector(toMySave) forControlEvents:UIControlEventTouchUpInside];
         
     }else{
         NSLog(@"用户还未登录");
@@ -161,13 +162,9 @@
         _userName.text = @"请点击登录";
         [_userImg setImage:[UIImage imageNamed:@"userdefaultimg.png"]];
         [_userBtn addTarget:self action:@selector(toLogin) forControlEvents:UIControlEventTouchUpInside];
+        _userBtn.userInteractionEnabled = YES;
+        _mysaveBtn.userInteractionEnabled = NO;
     }
-    //[NSUserDefaultsUtil getBoolean:@"xu"];
-    //if([NSUserDefaultsUtil getBoolean:"ISLOGIN"]==false)
-//    [NSUserDefaultsUtil saveNSString:@"test" :@"123"];
-//    [NSUserDefaultsUtil saveNSString:@"test" :@"456"];
-//    NSLog([NSUserDefaultsUtil getNSString:@"test"]);
-    
 }
 
 -(void)toLogin{
@@ -185,6 +182,10 @@
 -(void)quitLogin{
     //退出登录
     [NSUserDefaultsUtil saveBoolean:@"ISLOGIN" value:NO];
+    [NSUserDefaultsUtil saveNSString:@"userId" value:nil];
     [self refreshView];
+}
+-(void)toMySave{
+    //前往我的收藏页面
 }
 @end

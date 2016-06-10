@@ -17,4 +17,5 @@
 + (NSString *)getAddSave;
 + (NSString *)getDeleteSave;
 + (NSString *)getSearchFood;
++ (NSString *)getRegisterUrl;
 @end

@@ -39,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
+    
     [self initView];
     
     [self getFoodById];
@@ -52,6 +52,7 @@
 
 - (void)initView{
     //添加导航栏
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
     foodDetailNavBar = [UINavigationBar new];
     foodDetailNavBar.frame = CGRectMake(0, 0, SCREENWIDTH, 68);
     foodDetailNavBar.backgroundColor = [UIColor whiteColor];
@@ -59,7 +60,7 @@
     foodCellHeight = 0 ;
     isSaved = NO;
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"菜谱详情"];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"<返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
     [navigationItem setLeftBarButtonItem:leftButton];
     [foodDetailNavBar pushNavigationItem:navigationItem animated:NO];
     

@@ -13,8 +13,7 @@
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 
-@interface AlarmViewController ()
-{
+@interface AlarmViewController (){
     NSInteger time;
     NSTimer *timer;
     BOOL isStarted;

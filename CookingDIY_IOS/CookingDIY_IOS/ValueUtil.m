@@ -17,6 +17,7 @@ static NSString *isSaved = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/S
 static NSString *addSave = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Save/addSave";
 static NSString *deleteSave = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Save/deleteSave";
 static NSString *searchFood = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Food/searchFood";
+static NSString *registerUrl = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/User/register";
 
 @implementation ValueUtil
 
@@ -50,5 +51,9 @@ static NSString *searchFood = @"http://114.215.135.70/lypublic/1/index.php/CaiAp
 
 + (NSString *)getSearchFood{
     return searchFood;
+}
+
++ (NSString *)getRegisterUrl{
+    return registerUrl;
 }
 @end
