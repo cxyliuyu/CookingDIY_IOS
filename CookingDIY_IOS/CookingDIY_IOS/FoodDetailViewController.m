@@ -59,13 +59,15 @@
     foodCellHeight = 0 ;
     isSaved = NO;
     UINavigationItem *navigationItem = [[UINavigationItem alloc]initWithTitle:@"菜谱详情"];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"<返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem new]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(toBack)];
     [navigationItem setLeftBarButtonItem:leftButton];
     [foodDetailNavBar pushNavigationItem:navigationItem animated:NO];
     
     //初始化列表视图
     foodDetailTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 70, SCREENHEIGHT, SCREENHEIGHT-70) style:UITableViewStyleGrouped];
     foodDetailTableView.backgroundColor = [UIColor colorWithHexString:@"#EBEBEB"];
+    
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc]  initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     [self.view addSubview:foodDetailNavBar];
     [self.view addSubview:foodDetailTableView];

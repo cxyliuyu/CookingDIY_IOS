@@ -67,6 +67,8 @@
     NSLog(@"前往显示详情页面，foodId = %ld",btn.tag);
     FoodDetailViewController *foodDetailviewController = [[FoodDetailViewController alloc]init];
     foodDetailviewController.foodId = btn.tag;
+    //[self.na]
+    //[self.navigationController pushViewController:foodDetailviewController animated:YES];
     [self.window.rootViewController presentViewController:foodDetailviewController animated:YES completion:nil];
 }
 

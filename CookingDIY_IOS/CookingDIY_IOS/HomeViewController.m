@@ -52,6 +52,7 @@
 
 - (void)initView{
     //初始化页面
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc]  initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     searchButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 65, SCREENWIDTH, 50)];
     searchImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
     [searchImageView setImage:[UIImage imageNamed:@"searchimg"]];
@@ -70,7 +71,8 @@
 - (void)toSearch{
     //前往搜索页面
     SearchViewController *searchViewController = [[SearchViewController alloc]init];
-    [self presentViewController:searchViewController animated:YES completion:nil];
+    //[self presentViewController:searchViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:searchViewController animated:YES];
 }
 
 //数据源方法
