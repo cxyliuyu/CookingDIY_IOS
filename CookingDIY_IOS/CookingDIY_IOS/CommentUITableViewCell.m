@@ -19,7 +19,7 @@
     UILabel *userNameLabel;
     UILabel *contentLabel;
     UILabel *timeLabel;
-    NSString *foodId;
+    //NSString *foodId;
 }
 @end
 @implementation CommentUITableViewCell
@@ -45,6 +45,11 @@
     contentLabel.text = content;
     timeLabel.text = [self timeStamp:time];
     [userImgView sd_setImageWithURL:[[NSURL alloc]initWithString:userImg]];
+    
+    userImgView.layer.cornerRadius = 25;
+    userImgView.layer.borderWidth = 2;
+    userImgView.layer.borderColor = [UIColor colorWithHexString:@"#eeeeee"].CGColor;
+    userImgView.layer.masksToBounds = YES;
     
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:14];
     contentLabel.font = font;
@@ -85,8 +90,11 @@
 
 - (void)toFoodDetail{
     FoodDetailViewController *foodDetailviewController = [[FoodDetailViewController alloc]init];
-    foodDetailviewController.foodId = _foodId;
+    foodDetailviewController.foodId =  [_foodId intValue];
+    NSLog(@"foodId = %@",_foodId);
     [self.window.rootViewController presentViewController:foodDetailviewController animated:YES completion:nil];
 }
+
+
 
 @end

@@ -34,6 +34,7 @@
     if (self) {
         self.navigationItem.title = @"消息";
     }
+    [self initView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +45,8 @@
 - (void)initView{
     commentTableView = [UITableView new];
     commentTableView.frame = CGRectMake(5, 70, SCREENWIDTH-10, SCREENHEIGHT-70);
-    
+    [self.view addSubview:commentTableView];
+    [self refreshView];
 }
 
 - (void)refreshView{
@@ -53,7 +55,7 @@
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         [params setValue:[NSUserDefaultsUtil getNSString:@"userId"] forKey:@"userId"];
-        [manager POST:[ValueUtil getCommentByFoodId] parameters:params constructingBodyWithBlock:^(id  _Nonnull formData) {
+        [manager POST:[ValueUtil getConversation] parameters:params constructingBodyWithBlock:^(id  _Nonnull formData) {
             // 拼接data到请求体，这个block的参数是遵守AFMultipartFormData协议的。
             
         } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -106,6 +108,8 @@
         NSString *trueName = (NSString *)[commentArray[row] objectForKey:@"truename"];
         NSString *content = (NSString*)[commentArray[row] objectForKey:@"content"];
         NSString *time = (NSString *)[commentArray[row] objectForKey:@"time"];
+        NSString *foodId = (NSString *)[commentArray[row] objectForKey:@"foodid"];
+        cell.foodId = foodId;
         //NSLog(@"foodId1 = %@",foodId);
         cellHeight = [cell setUserImgView:userImg userNameView:trueName ContentView:content timeView:time];
         [self tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -113,6 +117,9 @@
     }
     return nil;
     
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [self refreshView];
 }
 
 @end

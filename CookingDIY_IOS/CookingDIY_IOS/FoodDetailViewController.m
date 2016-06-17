@@ -82,6 +82,7 @@
     //根据菜谱id获取菜谱详情，并显示在屏幕上
     NSMutableDictionary *params = [NSMutableDictionary new];
     [params setValue:[[NSString alloc]initWithFormat:@"%ld",_foodId] forKey:@"id"];
+    NSLog(@"foodId = %ld",_foodId);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:[ValueUtil getGetFoodByIdURL] parameters:params constructingBodyWithBlock:^(id _NonnullformData) {
@@ -91,7 +92,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-        //NSLog(@"%@", dic);
+        NSLog(@"%@", dic);
         NSString *code = (NSString *)[dic objectForKey:@"code"];
         if ([code isEqualToString:@"200"]) {
             foodDic = (NSDictionary *)[dic objectForKey:@"food"];
@@ -132,8 +133,7 @@
     }
     return 0;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 180 + foodCellHeight;
     }
