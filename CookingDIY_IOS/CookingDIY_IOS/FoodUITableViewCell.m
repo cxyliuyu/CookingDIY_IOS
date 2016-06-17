@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "FoodDetailViewController.h"
 #import "UIColor+ZXLazy.h"
+#import "FoodListViewController.h"
 
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -19,7 +20,6 @@
     UIImageView *foodImageView;
     UILabel *foodNameLabel;
     UILabel *contentLabel;
-    
 }
 @end
 @implementation FoodUITableViewCell
@@ -69,7 +69,13 @@
     foodDetailviewController.foodId = btn.tag;
     //[self.na]
     //[self.navigationController pushViewController:foodDetailviewController animated:YES];
-    [self.window.rootViewController presentViewController:foodDetailviewController animated:YES completion:nil];
+    if (_foodListViewController != nil) {
+        [_foodListViewController presentViewController:foodDetailviewController animated:YES completion:nil];
+    }else{
+        [self.window.rootViewController presentViewController:foodDetailviewController animated:YES completion:nil];
+    }
+
+   
 }
 
 @end

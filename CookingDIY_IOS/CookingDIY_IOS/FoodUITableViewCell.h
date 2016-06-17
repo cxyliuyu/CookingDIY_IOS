@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FoodListViewController.h"
 
 @interface FoodUITableViewCell : UITableViewCell
 
@@ -15,5 +16,6 @@
 @property (nonatomic,strong) NSString *foodImg;
 @property (nonatomic,strong) NSString *foodId;
 @property (nonatomic,strong) NSString *content;
+@property FoodListViewController *foodListViewController;
 -(NSInteger)setFoodImgImageView:(NSString *)foodImg foodNameLabel:(NSString *)foodName contentLabel:(NSString *)content foodId:(NSInteger )foodid;
 @end

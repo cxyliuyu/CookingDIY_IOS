@@ -95,6 +95,7 @@
 		84CC69771CCF06C6003AF95B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC69761CCF06C6003AF95B /* Reachability.m */; };
 		84CC697A1CCF0845003AF95B /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC69791CCF0845003AF95B /* HttpUtil.m */; };
 		84CC697D1CCF1E36003AF95B /* ValueUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC697C1CCF1E36003AF95B /* ValueUtil.m */; };
+		84EA0BB41D13002D008704EB /* CommentUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EA0BB31D13002D008704EB /* CommentUITableViewCell.m */; };
 		84EC4C321CCBA9E20079420A /* UIColor+ZXLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */; };
 		84EFEE981C9BCD2700FF1E79 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EFEE971C9BCD2700FF1E79 /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -273,6 +274,8 @@
 		84CC69791CCF0845003AF95B /* HttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
 		84CC697B1CCF1E36003AF95B /* ValueUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueUtil.h; sourceTree = "<group>"; };
 		84CC697C1CCF1E36003AF95B /* ValueUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueUtil.m; sourceTree = "<group>"; };
+		84EA0BB21D13002D008704EB /* CommentUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentUITableViewCell.h; sourceTree = "<group>"; };
+		84EA0BB31D13002D008704EB /* CommentUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentUITableViewCell.m; sourceTree = "<group>"; };
 		84EC4C301CCBA9E20079420A /* UIColor+ZXLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXLazy.m"; sourceTree = "<group>"; };
 		84EC4C311CCBA9E20079420A /* UIColor+ZXLazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZXLazy.h"; sourceTree = "<group>"; };
 		84EFEE961C9BCD2700FF1E79 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 				849C39621CF06E9800EC8133 /* FoodListUITableViewCell.m */,
 				849C39641CF06F4900EC8133 /* FoodStepUITableViewCell.h */,
 				849C39651CF06F4900EC8133 /* FoodStepUITableViewCell.m */,
+				84EA0BB21D13002D008704EB /* CommentUITableViewCell.h */,
+				84EA0BB31D13002D008704EB /* CommentUITableViewCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -840,6 +845,7 @@
 				8471AE541D071C7A0060C923 /* MJRefreshAutoFooter.m in Sources */,
 				8471AE5E1D071C7A0060C923 /* MJRefreshBackStateFooter.m in Sources */,
 				848C75DE1CED8EDE00294B46 /* AFNetworkReachabilityManager.m in Sources */,
+				84EA0BB41D13002D008704EB /* CommentUITableViewCell.m in Sources */,
 				842BD1381C9D6CC80012F130 /* HomeViewController.m in Sources */,
 				845019901CCDB4ED00207795 /* NSUserDefaultsUtil.m in Sources */,
 				8471AE5A1D071C7A0060C923 /* MJRefreshAutoNormalFooter.m in Sources */,

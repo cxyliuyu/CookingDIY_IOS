@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookingDIY_IOS/PersonalViewController.m"
-            timestampString = "483442551.476485"
+            timestampString = "487296999.938998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-initView"
             landmarkType = "5">
          </BreakpointContent>

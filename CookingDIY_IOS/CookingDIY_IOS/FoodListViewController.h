@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodListViewController : UIViewController
-
+@property NSString *myTitle;
+@property NSString *action;
+@property FoodListViewController *foodListViewController;
 @end

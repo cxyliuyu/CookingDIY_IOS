@@ -18,4 +18,9 @@
 + (NSString *)getDeleteSave;
 + (NSString *)getSearchFood;
 + (NSString *)getRegisterUrl;
++ (NSString *)getSaveByPage;
++ (NSString *)getFoodsByUserId;
++ (NSString *)getCommentByFoodId;
++ (NSString *)getConversation;
++ (NSString *)addFood;
 @end

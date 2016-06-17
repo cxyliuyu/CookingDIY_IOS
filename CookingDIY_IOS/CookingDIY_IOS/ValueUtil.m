@@ -18,6 +18,11 @@ static NSString *addSave = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/S
 static NSString *deleteSave = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Save/deleteSave";
 static NSString *searchFood = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Food/searchFood";
 static NSString *registerUrl = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/User/register";
+static NSString *getSaveUrl = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Save/getSaveByUserIdAndPage";
+static NSString *getFoodsByUserId = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Food/getFoodsByUserIdAndPage";
+static NSString *getCommentByFoodId = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Comment/getCommentByfoodIdAndPage";
+static NSString *getConversations = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Comment/getConversations";
+static NSString *addFood = @"http://114.215.135.70/lypublic/1/index.php/CaiApi/Comment/addComment";
 
 @implementation ValueUtil
 
@@ -55,5 +60,25 @@ static NSString *registerUrl = @"http://114.215.135.70/lypublic/1/index.php/CaiA
 
 + (NSString *)getRegisterUrl{
     return registerUrl;
+}
+
++ (NSString *)getSaveByPage{
+    return getSaveUrl;
+}
+
++ (NSString *)getFoodsByUserId{
+    return getFoodsByUserId;
+}
+
++ (NSString *)getCommentByFoodId{
+    return getCommentByFoodId;
+}
+
++ (NSString *)getConversation{
+    return getConversations;
+}
+
++ (NSString *)addFood{
+    return addFood;
 }
 @end

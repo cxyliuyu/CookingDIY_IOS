@@ -10,6 +10,7 @@
 #import "UIColor+ZXLazy.h"
 #import "NSUserDefaultsUtil.h"
 #import "LoginViewController.h"
+#import "FoodListViewController.h"
 //手机屏幕宽度与高度
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -154,7 +155,10 @@
         _userImg.image = image;
         _userBtn.userInteractionEnabled = NO;
         _mysaveBtn.userInteractionEnabled = YES;
+        _myfood.userInteractionEnabled = YES;
         [_mysaveBtn addTarget:self action:@selector(toMySave) forControlEvents:UIControlEventTouchUpInside];
+        [_myfood addTarget:self action:@selector(toMyFood) forControlEvents:UIControlEventTouchUpInside];
+        
         
     }else{
         NSLog(@"用户还未登录");
@@ -164,6 +168,7 @@
         [_userBtn addTarget:self action:@selector(toLogin) forControlEvents:UIControlEventTouchUpInside];
         _userBtn.userInteractionEnabled = YES;
         _mysaveBtn.userInteractionEnabled = NO;
+        _myfood.userInteractionEnabled = NO;
     }
 }
 
@@ -177,15 +182,28 @@
 -(void)viewDidAppear:(BOOL)animated{
     NSLog(@"viewDidAppear方法被调用了");
     [self refreshView];
-    //NSLog(@"%@",[NSUserDefaultsUtil getNSString:@"userId"]);
 }
+
 -(void)quitLogin{
     //退出登录
     [NSUserDefaultsUtil saveBoolean:@"ISLOGIN" value:NO];
     [NSUserDefaultsUtil saveNSString:@"userId" value:nil];
     [self refreshView];
 }
+
 -(void)toMySave{
     //前往我的收藏页面
+    FoodListViewController *foodListViewController = [[FoodListViewController alloc]init];
+    foodListViewController.myTitle = @"我的收藏";
+    foodListViewController.action = @"MYSAVE";
+    [self presentViewController:foodListViewController animated:YES completion:nil];
+    
+}
+-(void)toMyFood{
+    //前往我的菜谱
+    FoodListViewController *foodListViewController = [[FoodListViewController alloc]init];
+    foodListViewController.myTitle = @"我的菜谱";
+    foodListViewController.action = @"MYFOOD";
+    [self presentViewController:foodListViewController animated:YES completion:nil];
 }
 @end
